@@ -52,7 +52,10 @@
 }
 *{box-sizing:border-box}
 [hidden]{display:none!important}
-html{scroll-behavior:smooth}
+html{-webkit-text-size-adjust:100%}
+@media (hover:hover) and (pointer:fine){html{scroll-behavior:smooth}}
+section,[id]{scroll-margin-top:84px}
+a,button,summary,.chip{-webkit-tap-highlight-color:transparent;touch-action:manipulation}
 @media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
 body{margin:0;background:var(--stage);color:var(--bone);font-family:var(--body);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
 img{max-width:100%;display:block}
@@ -78,7 +81,7 @@ section{padding-block:clamp(72px,10vw,128px)}
 
 /* header */
 .top::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:3px;background:linear-gradient(90deg,var(--red) 0 33.3%,var(--gold) 33.3% 66.6%,var(--teal) 66.6% 100%)}
-.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:rgba(18,16,13,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line-d)}
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--stage);border-bottom:1px solid var(--line-d);transform:translateZ(0)}
 .top .wrap{display:flex;align-items:center;justify-content:space-between;gap:24px;padding-block:14px}
 .brand img{height:40px;width:auto}
 .nav{display:flex;align-items:center;gap:28px}
@@ -90,7 +93,8 @@ section{padding-block:clamp(72px,10vw,128px)}
 @media (max-width:900px){
   .menu-btn{display:inline-block}
   .nav{display:none;position:absolute;left:0;right:0;top:100%;background:var(--stage);flex-direction:column;align-items:flex-start;gap:18px;padding:20px var(--gut) 28px;border-bottom:1px solid var(--line-d)}
-  .nav.open{display:flex}
+  .nav.open{display:flex;box-shadow:0 18px 40px rgba(0,0,0,.45)}
+  .nav a{padding-block:4px;font-size:17px}
 }
 
 /* hero */
@@ -719,7 +723,11 @@ footer img{height:44px;width:auto}
   // menu
   var mb=document.getElementById('menuBtn'),nav=document.getElementById('nav');
   mb.addEventListener('click',function(){var o=nav.classList.toggle('open');mb.setAttribute('aria-expanded',o)});
-  nav.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){nav.classList.remove('open');mb.setAttribute('aria-expanded','false')})});
+  function closeNav(){if(nav.classList.contains('open')){nav.classList.remove('open');mb.setAttribute('aria-expanded','false')}}
+  nav.querySelectorAll('a').forEach(function(a){a.addEventListener('click',closeNav)});
+  document.addEventListener('click',function(e){if(!nav.contains(e.target)&&e.target!==mb)closeNav()});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')closeNav()});
+  var openY=0;mb.addEventListener('click',function(){openY=window.scrollY});window.addEventListener('scroll',function(){if(nav.classList.contains('open')&&Math.abs(window.scrollY-openY)>60)closeNav()},{passive:true});
   // copy helpers
   function copy(text,btn){var done=function(){var o=btn.textContent;btn.textContent='Copied';setTimeout(function(){btn.textContent=o},1500)};
     try{navigator.clipboard.writeText(text).then(done,function(){sel(btn)})}catch(e){sel(btn)}}
