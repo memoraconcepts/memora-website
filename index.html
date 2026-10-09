@@ -121,7 +121,7 @@ section{padding-block:clamp(72px,10vw,128px)}
   .reel .frame[aria-hidden="true"]{display:none}
 }
 .frame{width:clamp(240px,28vw,360px);flex:none;display:flex;flex-direction:column;gap:8px}
-.frame img{aspect-ratio:4/3;object-fit:cover;border-radius:6px;width:100%}
+.frame img{aspect-ratio:4/3;height:auto;object-fit:cover;border-radius:6px;width:100%}
 .frame span{font-family:var(--mono);font-size:12px;color:var(--bone-2);letter-spacing:.06em}
 
 /* statement */
@@ -146,7 +146,7 @@ section{padding-block:clamp(72px,10vw,128px)}
 .card{all:unset;cursor:pointer;display:flex;flex-direction:column;gap:12px;min-width:0}
 .card:focus-visible{outline:2px solid var(--gold);outline-offset:6px;border-radius:8px}
 .card .ph{overflow:hidden;border-radius:8px;background:var(--stage-2)}
-.card img{width:100%;aspect-ratio:4/3;object-fit:cover;transition:transform .5s ease}
+.card img{width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;transition:transform .5s ease}
 .card:hover img{transform:scale(1.04)}
 .card.wide img{aspect-ratio:8/3}
 @media (prefers-reduced-motion: reduce){.card img{transition:none}.card:hover img{transform:none}}
@@ -158,7 +158,7 @@ section{padding-block:clamp(72px,10vw,128px)}
 dialog{border:none;padding:0;background:var(--stage-2);color:var(--bone);border-radius:12px;width:min(980px,calc(100vw - 32px));max-height:calc(100vh - 48px)}
 dialog::backdrop{background:rgba(8,7,5,.8)}
 .dlg{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr)}
-.dlg img{width:100%;height:100%;min-height:280px;object-fit:cover}
+.dlg img{width:100%;height:100%;min-height:280px;object-fit:contain;background:var(--stage)}
 .dlg-body{padding:32px;display:flex;flex-direction:column;gap:16px;overflow:auto}
 .dlg-body dl{display:grid;grid-template-columns:auto 1fr;gap:6px 16px;margin:0;font-size:15px}
 .dlg-body dt{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--gold);padding-top:3px}
@@ -189,7 +189,7 @@ dialog::backdrop{background:rgba(8,7,5,.8)}
 .exp-grid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:clamp(32px,5vw,72px);align-items:center}
 @media (max-width:900px){.exp-grid{grid-template-columns:1fr}}
 .exp-img{border-radius:10px;overflow:hidden}
-.exp-img img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.exp-img img{width:100%;height:auto;aspect-ratio:4/3;object-fit:cover}
 .steps{list-style:none;margin:28px 0 0;padding:0;display:flex;flex-direction:column}
 .steps li{display:grid;grid-template-columns:56px 1fr;gap:16px;padding:16px 0;border-top:1px solid var(--line-d)}
 .steps li:last-child{border-bottom:1px solid var(--line-d)}
@@ -327,6 +327,16 @@ footer img{height:44px;width:auto}
 .li-btn .li-ic{color:var(--gold)}
 .li-btn:hover{background:var(--gold);color:var(--stage);--li-bg:var(--gold)}
 .li-btn:hover .li-ic{color:var(--stage)}
+
+/* phones: show each piece of work whole and sharp, never a zoomed-in crop */
+@media (max-width:600px){
+  .card img,.card.wide img{aspect-ratio:auto;object-fit:contain}
+  .card .ph{background:var(--stage-2)}
+  .exp-img img{aspect-ratio:auto}
+  .reel .frame{width:min(78vw,320px)}
+  .dlg img{height:auto;min-height:0;max-height:55vh;object-fit:contain;background:var(--stage)}
+}
+img{image-rendering:auto}
 </style>
 </head>
 <body>
@@ -479,7 +489,7 @@ footer img{height:44px;width:auto}
 
   <section id="experiential" aria-labelledby="exp-title">
     <div class="wrap exp-grid">
-      <div class="exp-img"><img src="img/nrg_booth2.webp" alt="3D render of a red NRG 106.5FM branded activation booth"></div>
+      <div class="exp-img"><img loading="lazy" width="1200" height="630" src="img/nrg_booth2.webp" srcset="img/nrg_booth2-640.webp 640w, img/nrg_booth2.webp 1200w, img/nrg_booth2-2000.webp 2000w" sizes="(max-width:860px) 100vw, 600px" alt="3D render of a red NRG 106.5FM branded activation booth"></div>
       <div>
         <p class="eyebrow">Signature service</p>
         <h2 id="exp-title" style="margin-top:14px">Experiential, end to end</h2>
@@ -699,14 +709,17 @@ footer img{height:44px;width:auto}
     {t:'Logo design',k:'brand',tag:'Brand',img:'logos',s:'Identities for Ugandan businesses',made:'Logos and brand marks',role:'Memora clients and team work',x:'Marks for businesses including Kores Eye Care and Tarn Energy.'}
   ];
   var grid=document.getElementById('grid'), reel=document.getElementById('reel');
+  var DIMS={"toyota":[1200,635],"guinness":[1200,536],"vivo":[1200,641],"logos":[1200,407],"pulse_nation":[1200,1003],"fida":[1200,630],"smirnoff":[1200,653],"minute_maid":[1200,801],"mtn_pulse":[1200,737],"tusker_booth":[1200,591],"nrg_booth":[1200,630],"nrg_booth2":[1200,630],"bellazuri_1":[1200,675]};
+  function srcs(n){return 'src="img/'+n+'.webp" srcset="img/'+n+'-640.webp 640w, img/'+n+'.webp 1200w, img/'+n+'-2000.webp 2000w"'}
+  function dims(n){var d=DIMS[n]||[1200,800];return ' width="'+d[0]+'" height="'+d[1]+'"'}
   function card(w,i){
     var b=document.createElement('button'); b.className='card'; b.dataset.k=w.k; b.dataset.i=i;
     
-    b.innerHTML='<div class="ph"><img loading="lazy" decoding="async" width="1200" height="900" src="img/'+w.img+'.webp" alt="'+w.t+': '+w.s+'"></div><div class="meta"><h3>'+w.t+'</h3><span class="tag">'+w.tag+'</span></div><p>'+w.s+'</p>';
+    b.innerHTML='<div class="ph"><img loading="lazy" decoding="async"'+dims(w.img)+' '+srcs(w.img)+' sizes="(max-width:600px) calc(100vw - 32px), (max-width:980px) 50vw, 400px" alt="'+w.t+': '+w.s+'"></div><div class="meta"><h3>'+w.t+'</h3><span class="tag">'+w.tag+'</span></div><p>'+w.s+'</p>';
     b.addEventListener('click',function(){openW(i)}); return b;
   }
   W.forEach(function(w,i){grid.appendChild(card(w,i))});
-  function narrow(){var m=window.matchMedia('(max-width:600px)').matches;grid.querySelectorAll('.card').forEach(function(c){var w=W[+c.dataset.i];var on=(w.wide&&!m&&currentF==='all');c.style.gridColumn=on?'span 2':'';c.classList.toggle('wide',on)})}
+  function narrow(){var m=window.matchMedia('(max-width:600px)').matches;grid.querySelectorAll('.card').forEach(function(c){var w=W[+c.dataset.i];var on=!!(w.wide&&!m&&currentF==='all');c.style.gridColumn=on?'span 2':'';c.classList.toggle('wide',on)})}
   var currentF='all';
   document.querySelectorAll('.chip').forEach(function(c){c.addEventListener('click',function(){
     currentF=c.dataset.f;
@@ -718,12 +731,12 @@ footer img{height:44px;width:auto}
   // reel: two copies for a seamless loop
   var picks=[0,2,4,1,3,5,6,9];
   for(var r=0;r<2;r++){picks.forEach(function(i,n){var w=W[i];var f=document.createElement('div');f.className='frame';if(r)f.setAttribute('aria-hidden','true');
-    f.innerHTML='<img src="img/'+w.img+'.webp" alt="'+(r?'':w.t)+'"><span>M–'+String(n+1).padStart(2,'0')+' · '+w.t.toUpperCase()+'</span>';reel.appendChild(f)})}
+    f.innerHTML='<img'+dims(w.img)+' '+srcs(w.img)+' sizes="(max-width:600px) 260px, 360px" alt="'+(r?'':w.t)+'"><span>M–'+String(n+1).padStart(2,'0')+' · '+w.t.toUpperCase()+'</span>';reel.appendChild(f)})}
   if('IntersectionObserver' in window){var reelBox=reel.parentNode;new IntersectionObserver(function(es){reelBox.classList.toggle('off',!es[0].isIntersecting)}).observe(reelBox)}
   // dialog
   var d=document.getElementById('dlg');
   function openW(i){var w=W[i];
-    document.getElementById('dlgImg').src='img/'+w.img+'.webp';document.getElementById('dlgImg').alt=w.t+': '+w.s;
+    var di=document.getElementById('dlgImg');di.sizes='(max-width:760px) 100vw, 560px';di.srcset='img/'+w.img+'-640.webp 640w, img/'+w.img+'.webp 1200w, img/'+w.img+'-2000.webp 2000w';di.src='img/'+w.img+'.webp';document.getElementById('dlgImg').alt=w.t+': '+w.s;
     document.getElementById('dlgTag').textContent=w.tag;document.getElementById('dlgTitle').textContent=w.t;
     document.getElementById('dlgText').textContent=w.x;document.getElementById('dlgMade').textContent=w.made;document.getElementById('dlgRole').textContent=w.role;
     document.getElementById('dlgCredit').textContent=w.role.indexOf('partner')>-1?'Created by the Memora creative team in collaboration with a partner agency. Brand names and marks belong to their owners.':'';
