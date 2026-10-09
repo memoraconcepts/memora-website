@@ -1,0 +1,9 @@
+[[redirects]]
+  from = "https://www.memoraconcepts.com/*"
+  to = "https://memoraconcepts.com/:splat"
+  status = 301
+  force = true
+[[headers]]
+  for = "/img/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000"

@@ -1,0 +1,860 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Memora | Branding &amp; Experiential Agency, Kampala</title>
+<meta name="description" content="Memora is a branding and experiential agency in Namugongo, Kampala. Brand identity, activations, events and TikTok-first content. Built to be remembered.">
+<link rel="canonical" href="https://memoraconcepts.com/">
+<meta property="og:title" content="Memora | Built to be remembered">
+<meta property="og:description" content="Branding, experiential marketing and content from Kampala, Uganda. Founding offer: 50% off your first month for our first 10 clients.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://memoraconcepts.com/">
+<meta property="og:image" content="https://memoraconcepts.com/img/og.jpg">
+<meta name="theme-color" content="#12100D">
+<link rel="icon" type="image/png" href="img/favicon.png">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"Memora Concepts Ltd","alternateName":"Memora","url":"https://memoraconcepts.com","email":"info@memoraconcepts.com","telephone":"+256784215671","address":{"@type":"PostalAddress","addressLocality":"Namugongo, Kampala","addressCountry":"UG"},"slogan":"Built to be remembered"}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&family=DM+Mono:wght@400;500&display=swap">
+<style>
+/* Layout concept: a black "stage" with cream "paper" interludes. Work leads, type is huge and left-set,
+   gold marks only what matters. Sections alternate stage / paper like a show and its programme. */
+:root{
+  --stage:#12100D;      /* warm black, the brand ground */
+  --stage-2:#1C1915;    /* raised black */
+  --line-d:#332E26;     /* rule on black */
+  --paper:#F4EEE2;      /* cream */
+  --paper-2:#E9E0CE;    /* raised cream */
+  --line-l:#D5C9B2;     /* rule on cream */
+  --ink:#14120F;        /* text on cream */
+  --ink-2:#4A4339;      /* quiet text on cream */
+  --bone:#F4EEE2;       /* text on black */
+  --bone-2:#B9AF9C;     /* quiet text on black */
+  --gold:#F59D0B;       /* logo orange, accent on black */
+  --red:#CB020C;        /* logo red */
+  --teal:#009C86;       /* logo teal */
+  --teal-l:#19B39B;     /* teal for text on black */
+  --gold-deep:#A3020A;  /* deep logo red, accent text on cream */
+  --display:'Outfit', 'Avenir Next', 'Segoe UI', Arial, sans-serif;
+  --body:'DM Sans', 'Segoe UI', Helvetica, Arial, sans-serif;
+  --mono:'DM Mono', ui-monospace, 'SFMono-Regular', Consolas, monospace;
+  --wrap:1240px;
+  --gut:clamp(16px, 4vw, 40px);
+  color-scheme: dark;
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--stage);color:var(--bone);font-family:var(--body);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:4px}
+.wrap{max-width:var(--wrap);margin-inline:auto;padding-inline:var(--gut)}
+.eyebrow{font-family:var(--mono);font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+.paper .eyebrow{color:var(--gold-deep)}
+h1,h2,h3{font-family:var(--display);line-height:1.05;margin:0;text-wrap:balance;letter-spacing:-.01em}
+h2{font-size:clamp(34px,5vw,64px);font-weight:700}
+h3{font-size:22px;font-weight:600;line-height:1.2}
+p{margin:0}
+section{padding-block:clamp(72px,10vw,128px)}
+.paper{background:var(--paper);color:var(--ink)}
+.sec-head{display:flex;flex-direction:column;gap:16px;margin-bottom:clamp(36px,5vw,64px);max-width:860px}
+.sec-head p.lede{font-size:19px;color:var(--bone-2);max-width:62ch}
+.paper .sec-head p.lede{color:var(--ink-2)}
+.btn{display:inline-flex;align-items:center;gap:10px;font-family:var(--body);font-weight:700;font-size:16px;padding:14px 22px;border-radius:999px;text-decoration:none;border:1.5px solid var(--gold);cursor:pointer;transition:background .2s,color .2s}
+.btn-gold{background:var(--gold);color:var(--stage)}
+.btn-gold:hover{background:#FFB233}
+.btn-ghost{background:transparent;color:var(--bone)}
+.btn-ghost:hover{background:var(--stage-2)}
+
+/* header */
+.top::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:3px;background:linear-gradient(90deg,var(--red) 0 33.3%,var(--gold) 33.3% 66.6%,var(--teal) 66.6% 100%)}
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:rgba(18,16,13,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line-d)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:24px;padding-block:14px}
+.brand img{height:40px;width:auto}
+.nav{display:flex;align-items:center;gap:28px}
+.nav a{text-decoration:none;font-size:15px;color:var(--bone-2)}
+.nav a:hover{color:var(--bone)}
+.nav .btn{padding:10px 18px;font-size:14px}
+.menu-btn{display:none;background:none;border:1px solid var(--line-d);color:var(--bone);border-radius:999px;padding:8px 14px;font:600 14px var(--body);cursor:pointer}
+@media (max-width:900px){
+  .menu-btn{display:inline-block}
+  .nav{display:none;position:absolute;left:0;right:0;top:100%;background:var(--stage);flex-direction:column;align-items:flex-start;gap:18px;padding:20px var(--gut) 28px;border-bottom:1px solid var(--line-d)}
+  .nav.open{display:flex}
+}
+
+/* hero */
+.hero{padding-block:clamp(56px,8vw,104px) 0;position:relative;overflow:hidden}
+.hero .mark{position:absolute;right:-4%;top:40px;width:min(40vw,480px);opacity:.10;pointer-events:none}
+.hero-grid{display:grid;gap:28px;position:relative}
+.hero h1{font-size:clamp(54px,11vw,152px);font-weight:800;letter-spacing:-.035em;line-height:.92}
+.hero h1 .g{color:var(--gold)}
+.hero-sub{display:flex;flex-wrap:wrap;gap:24px 48px;align-items:flex-end;justify-content:space-between}
+.hero-sub p{font-size:clamp(18px,2vw,22px);color:var(--bone-2);max-width:46ch}
+.hero-cta{display:flex;flex-wrap:wrap;gap:12px}
+.reel{margin-top:clamp(48px,7vw,88px);border-top:1px solid var(--line-d);border-bottom:1px solid var(--line-d);overflow:hidden;padding-block:18px}
+.reel-track{display:flex;gap:16px;width:max-content;animation:roll 60s linear infinite}
+.reel:hover .reel-track{animation-play-state:paused}
+@keyframes roll{to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion: reduce){.reel{overflow-x:auto}.reel-track{animation:none}}
+.frame{width:clamp(240px,28vw,360px);flex:none;display:flex;flex-direction:column;gap:8px}
+.frame img{aspect-ratio:4/3;object-fit:cover;border-radius:6px;width:100%}
+.frame span{font-family:var(--mono);font-size:12px;color:var(--bone-2);letter-spacing:.06em}
+
+/* statement */
+.statement .wrap{display:grid;gap:56px}
+.statement h2{font-size:clamp(38px,6vw,84px);max-width:16ch}
+.statement h2 em{font-style:normal;color:var(--gold-deep)}
+.facts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;border-top:2px solid var(--ink)}
+.facts div{padding:22px 24px 0 0;display:flex;flex-direction:column;gap:6px;min-width:0}
+.facts b{font-family:var(--display);font-size:clamp(28px,3.4vw,44px);font-weight:700;line-height:1}
+.facts span{color:var(--ink-2);font-size:16px}
+@media (max-width:700px){.facts{grid-template-columns:1fr}.facts div{padding:18px 0;border-bottom:1px solid var(--line-l)}}
+.about-cols{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:40px;color:var(--ink-2);font-size:18px}
+@media (max-width:760px){.about-cols{grid-template-columns:1fr;gap:20px}}
+
+/* work */
+.filters{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:32px}
+.chip{font:500 14px var(--body);color:var(--bone-2);background:transparent;border:1px solid var(--line-d);border-radius:999px;padding:9px 16px;cursor:pointer}
+.chip[aria-pressed="true"]{background:var(--bone);color:var(--stage);border-color:var(--bone)}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+@media (max-width:980px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:600px){.grid{grid-template-columns:1fr}}
+.card{all:unset;cursor:pointer;display:flex;flex-direction:column;gap:12px;min-width:0}
+.card:focus-visible{outline:2px solid var(--gold);outline-offset:6px;border-radius:8px}
+.card .ph{overflow:hidden;border-radius:8px;background:var(--stage-2)}
+.card img{width:100%;aspect-ratio:4/3;object-fit:cover;transition:transform .5s ease}
+.card:hover img{transform:scale(1.04)}
+.card.wide img{aspect-ratio:8/3}
+@media (prefers-reduced-motion: reduce){.card img{transition:none}.card:hover img{transform:none}}
+.card .meta{display:flex;justify-content:space-between;gap:12px;align-items:baseline}
+.card h3{font-size:21px}
+.card .tag{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--teal-l);white-space:nowrap}
+.card p{color:var(--bone-2);font-size:15px}
+.credit{margin-top:32px;font-size:14px;color:var(--bone-2);max-width:80ch;border-left:2px solid var(--gold);padding-left:14px}
+dialog{border:none;padding:0;background:var(--stage-2);color:var(--bone);border-radius:12px;width:min(980px,calc(100vw - 32px));max-height:calc(100vh - 48px)}
+dialog::backdrop{background:rgba(8,7,5,.8)}
+.dlg{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr)}
+.dlg img{width:100%;height:100%;min-height:280px;object-fit:cover}
+.dlg-body{padding:32px;display:flex;flex-direction:column;gap:16px;overflow:auto}
+.dlg-body dl{display:grid;grid-template-columns:auto 1fr;gap:6px 16px;margin:0;font-size:15px}
+.dlg-body dt{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--gold);padding-top:3px}
+.dlg-body dd{margin:0;color:var(--bone)}
+.dlg-body .small{font-size:13px;color:var(--bone-2)}
+.close{align-self:flex-end;background:none;border:1px solid var(--line-d);color:var(--bone);border-radius:999px;padding:6px 14px;font:600 14px var(--body);cursor:pointer}
+@media (max-width:760px){.dlg{grid-template-columns:1fr}.dlg img{min-height:200px;max-height:300px}}
+
+/* services */
+.pillars{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;border-top:2px solid var(--ink)}
+.pillar{padding:28px 28px 8px 0;display:flex;flex-direction:column;gap:14px;min-width:0}
+.pillar + .pillar{padding-left:28px;border-left:1px solid var(--line-l)}
+.pillar ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px;color:var(--ink-2);font-size:16px}
+.pillar li{padding-left:16px;position:relative}
+.pillar li::before{content:"";position:absolute;left:0;top:.65em;width:7px;height:2px;background:var(--gold-deep)}
+@media (max-width:860px){.pillars{grid-template-columns:1fr}.pillar,.pillar + .pillar{padding:24px 0;border-left:none;border-bottom:1px solid var(--line-l)}}
+.new{margin-top:64px;background:var(--ink);color:var(--bone);border-radius:12px;padding:clamp(24px,4vw,44px);display:grid;gap:28px}
+.new-head{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;align-items:baseline}
+.new-head h3{font-size:28px}
+.new-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:20px}
+.new-grid div{border-top:1px solid var(--line-d);padding-top:14px;display:flex;flex-direction:column;gap:6px;min-width:0}
+.new-grid div:nth-child(3n+1){border-top-color:var(--red)}.new-grid div:nth-child(3n+2){border-top-color:var(--gold)}.new-grid div:nth-child(3n){border-top-color:var(--teal)}
+.paper .new .eyebrow{color:var(--gold)}
+.new-grid b{font-family:var(--display);font-size:19px;font-weight:600}
+.new-grid span{font-size:15px;color:var(--bone-2)}
+
+/* experiential */
+.exp-grid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:clamp(32px,5vw,72px);align-items:center}
+@media (max-width:900px){.exp-grid{grid-template-columns:1fr}}
+.exp-img{border-radius:10px;overflow:hidden}
+.exp-img img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.steps{list-style:none;margin:28px 0 0;padding:0;display:flex;flex-direction:column}
+.steps li{display:grid;grid-template-columns:56px 1fr;gap:16px;padding:16px 0;border-top:1px solid var(--line-d)}
+.steps li:last-child{border-bottom:1px solid var(--line-d)}
+.steps li:nth-child(3n+1) .n{color:var(--red)}.steps li:nth-child(3n+2) .n{color:var(--gold)}.steps li:nth-child(3n) .n{color:var(--teal-l)}
+.steps .n{font-family:var(--display);font-size:32px;font-weight:700;color:var(--gold);line-height:1}
+.steps b{display:block;font-family:var(--display);font-size:20px;font-weight:600}
+.steps span{color:var(--bone-2);font-size:16px}
+.build-for{margin-top:24px;font-size:15px;color:var(--bone-2)}
+
+/* approach */
+.phases{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.phase{background:var(--paper-2);border-radius:10px;padding:28px;display:flex;flex-direction:column;gap:10px;min-width:0}
+.phase .k{font-family:var(--mono);font-size:13px;color:var(--gold-deep);letter-spacing:.1em}
+.phase p{color:var(--ink-2)}
+@media (max-width:820px){.phases{grid-template-columns:1fr}}
+.promises{margin-top:28px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;background:var(--ink);color:var(--bone);border-radius:10px;padding:26px 28px}
+.promises div{display:flex;flex-direction:column;gap:2px}
+.promises b{font-family:var(--display);font-size:30px;color:var(--gold);line-height:1.1}
+.promises span{font-size:15px;color:var(--bone-2)}
+@media (max-width:700px){.promises{grid-template-columns:1fr}}
+
+/* ways + sectors */
+.ways{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+@media (max-width:900px){.ways{grid-template-columns:1fr}}
+.way{border:1px solid var(--line-d);border-radius:10px;padding:28px;display:flex;flex-direction:column;gap:12px;min-width:0}
+.way .who{font-family:var(--mono);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--gold)}
+.way p{color:var(--bone-2);font-size:16px}
+.way .price{margin-top:auto;padding-top:12px;font-family:var(--display);font-size:20px;font-weight:600}
+.offer{margin-top:28px;display:flex;flex-wrap:wrap;align-items:center;gap:16px 28px;border:1.5px solid var(--gold);border-radius:12px;padding:22px 26px;background:linear-gradient(90deg,rgba(245,157,11,.12),rgba(0,156,134,.08))}
+.offer-t{flex:1;min-width:240px;font-size:18px}
+.sectors{margin-top:56px;display:flex;flex-wrap:wrap;gap:10px}
+.sectors span{border:1px solid var(--line-d);border-radius:999px;padding:8px 16px;font-size:15px;color:var(--bone)}
+
+/* notes */
+.notes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+@media (max-width:900px){.notes{grid-template-columns:1fr}}
+.note{background:var(--paper-2);border-radius:10px;padding:28px;display:flex;flex-direction:column;gap:14px;min-width:0}
+.note .fig{font-family:var(--display);font-size:52px;font-weight:800;line-height:1;color:var(--ink);letter-spacing:-.02em}
+.note .fig small{font-size:20px;font-weight:600;color:var(--gold-deep);margin-left:4px}
+.note p{color:var(--ink-2);font-size:16px}
+.note a{font-size:14px;color:var(--gold-deep);margin-top:auto}
+
+/* studio */
+.team{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+@media (max-width:900px){.team{grid-template-columns:1fr}}
+.person{border-top:3px solid var(--gold);padding-top:18px;display:flex;flex-direction:column;gap:6px}
+.team .person:nth-child(1){border-top-color:var(--red)}.team .person:nth-child(3){border-top-color:var(--teal)}
+.person .role{font-family:var(--mono);font-size:13px;color:var(--gold);letter-spacing:.06em}
+.person p{color:var(--bone-2);font-size:15px}
+.quote{margin-top:64px;font-family:var(--display);font-size:clamp(26px,3.4vw,42px);line-height:1.2;font-weight:500;max-width:28ch}
+.quote span{display:block;margin-top:16px;font-family:var(--mono);font-size:14px;color:var(--gold);letter-spacing:.08em}
+
+/* contact */
+.contact-grid{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:clamp(32px,5vw,72px)}
+@media (max-width:900px){.contact-grid{grid-template-columns:1fr}}
+form{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+form .full{grid-column:1/-1}
+@media (max-width:600px){form{grid-template-columns:1fr}}
+label{display:flex;flex-direction:column;gap:6px;font-size:14px;color:var(--ink-2);font-weight:500}
+input,select,textarea{font:16px var(--body);color:var(--ink);background:#FBF8F1;border:1px solid var(--line-l);border-radius:8px;padding:12px 14px;width:100%;color-scheme:light}
+textarea{min-height:120px;resize:vertical}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--gold-deep);outline-offset:1px}
+.form-actions{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.paper .btn-ghost{color:var(--ink);border-color:var(--ink)}
+.paper .btn-ghost:hover{background:var(--paper-2)}
+.result{grid-column:1/-1;background:var(--paper-2);border-radius:10px;padding:20px;display:flex;flex-direction:column;gap:12px}
+.result pre{margin:0;white-space:pre-wrap;font:14px/1.5 var(--mono);color:var(--ink)}
+.contact-card{background:var(--ink);color:var(--bone);border-radius:12px;padding:32px;display:flex;flex-direction:column;gap:22px;align-self:start}
+.contact-card .k{font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold)}
+.contact-card .v{font-size:19px;user-select:all}
+.contact-card .s{font-size:13px;color:var(--bone-2)}
+.copy{background:none;border:1px solid var(--line-d);color:var(--bone-2);border-radius:999px;padding:4px 10px;font:500 12px var(--body);cursor:pointer;margin-left:8px;vertical-align:middle}
+
+footer{border-top:1px solid var(--line-d);padding-block:40px}
+footer .wrap{display:flex;flex-wrap:wrap;gap:20px;justify-content:space-between;align-items:center;color:var(--bone-2);font-size:14px}
+footer img{height:44px;width:auto}
+
+/* load sequence */
+.rise{animation:rise .9s cubic-bezier(.2,.7,.2,1) both}
+.rise.d2{animation-delay:.12s}.rise.d3{animation-delay:.24s}
+@keyframes rise{from{transform:translateY(18px)}to{transform:none}}
+@media (prefers-reduced-motion: reduce){.rise{animation:none}}
+
+/* Ask Mo chat */
+.mo-fab{position:fixed;right:max(16px,env(safe-area-inset-right,0px));bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:40;display:flex;align-items:center;gap:10px;background:var(--gold);color:var(--stage);border:none;border-radius:999px;padding:12px 18px 12px 12px;font:700 15px var(--body);cursor:pointer;box-shadow:0 10px 30px rgba(0,0,0,.35)}
+.mo-fab .dot{width:30px;height:30px;border-radius:50%;background:var(--stage);display:grid;place-items:center}
+.mo-fab .dot img{width:20px;height:20px;object-fit:contain}
+.mo{position:fixed;right:max(16px,env(safe-area-inset-right,0px));bottom:calc(84px + env(safe-area-inset-bottom,0px));z-index:41;width:min(390px,calc(100vw - 32px));height:min(600px,calc(100vh - 120px));background:var(--stage-2);color:var(--bone);border:1px solid var(--line-d);border-radius:16px;display:flex;flex-direction:column;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.5)}
+.mo-head{display:flex;align-items:center;gap:12px;padding:14px 16px;border-bottom:1px solid var(--line-d);background:var(--stage)}
+.mo-head b{font-family:var(--display);font-size:17px;display:block}
+.mo-head span{font-size:12px;color:var(--bone-2)}
+.mo-head .x{margin-left:auto;background:none;border:1px solid var(--line-d);color:var(--bone);border-radius:999px;padding:4px 12px;font:600 13px var(--body);cursor:pointer}
+.mo-log{flex:1;overflow-y:auto;padding:16px;display:flex;flex-direction:column;gap:10px}
+.msg{max-width:86%;padding:10px 14px;border-radius:14px;font-size:15px;line-height:1.5;white-space:pre-wrap;overflow-wrap:anywhere}
+.msg.bot{background:var(--stage);border:1px solid var(--line-d);align-self:flex-start;border-bottom-left-radius:4px}
+.msg.me{background:var(--gold);color:var(--stage);align-self:flex-end;border-bottom-right-radius:4px}
+.msg a{color:var(--gold)}
+.mo-chips{display:flex;flex-wrap:wrap;gap:8px;padding:0 16px 10px}
+.mo-chips button{background:transparent;border:1px solid var(--line-d);color:var(--bone);border-radius:999px;padding:7px 12px;font:500 13px var(--body);cursor:pointer}
+.mo-chips button:hover{border-color:var(--gold)}
+.mo-form{display:flex;gap:8px;padding:12px;border-top:1px solid var(--line-d);background:var(--stage)}
+.mo-form input{flex:1;min-width:0;background:var(--stage-2);color:var(--bone);border:1px solid var(--line-d);border-radius:999px;padding:11px 14px;font:15px var(--body);color-scheme:dark}
+.mo-form button{background:var(--gold);color:var(--stage);border:none;border-radius:999px;padding:0 16px;font:700 14px var(--body);cursor:pointer}
+.mo-foot{font-size:11px;color:var(--bone-2);padding:0 16px 10px}
+/* owner insights */
+.ins-btn{position:fixed;left:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:40;background:var(--stage-2);color:var(--bone);border:1px solid var(--gold);border-radius:999px;padding:10px 16px;font:600 14px var(--body);cursor:pointer}
+#ins{width:min(1000px,calc(100vw - 32px))}
+.ins-body{padding:28px;display:flex;flex-direction:column;gap:20px;overflow:auto;max-height:calc(100vh - 80px)}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px}
+.kpis div{background:var(--stage);border:1px solid var(--line-d);border-radius:10px;padding:14px}
+.kpis b{display:block;font-family:var(--display);font-size:30px;color:var(--gold);font-variant-numeric:tabular-nums}
+.kpis span{font-size:13px;color:var(--bone-2)}
+.tbl{overflow-x:auto;border:1px solid var(--line-d);border-radius:10px}
+.tbl table{border-collapse:collapse;width:100%;font-size:14px;min-width:640px}
+.tbl th,.tbl td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--line-d);vertical-align:top}
+.tbl th{font-family:var(--mono);font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--gold)}
+.tbl td{color:var(--bone)}
+.empty{color:var(--bone-2);font-size:15px}
+</style>
+</head>
+<body>
+
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Memora home"><img src="img/logo_colour.png" alt="Memora Concepts Ltd"></a>
+    <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="nav">Menu</button>
+    <nav class="nav" id="nav" aria-label="Main">
+      <a href="#work">Work</a>
+      <a href="#services">Services</a>
+      <a href="#experiential">Experiential</a>
+      <a href="#approach">Approach</a>
+      <a href="#notes">Field notes</a>
+      <a href="#studio">Studio</a>
+      <a class="btn btn-gold" href="#contact">Start a project</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero" aria-labelledby="hero-title">
+    <img class="mark" src="img/mark_colour.png" alt="">
+    <div class="wrap hero-grid">
+      <p class="eyebrow rise">Branding · Experiential · Content — Kampala, Uganda</p>
+      <h1 id="hero-title" class="rise d2">Built to be <span class="g">remembered.</span></h1>
+      <div class="hero-sub rise d3">
+        <p>We design brand identities, campaigns and live brand moments that people carry home in their memory. From the logo to the launch night.</p>
+        <div class="hero-cta">
+          <a class="btn btn-gold" href="#work">See the work</a>
+          <a class="btn btn-ghost" href="#contact">Get a free brand check</a>
+        </div>
+      </div>
+    </div>
+    <div class="reel" aria-label="Selected work reel">
+      <div class="reel-track" id="reel"></div>
+    </div>
+  </section>
+
+  <section class="paper statement" aria-labelledby="about-title">
+    <div class="wrap">
+      <div class="sec-head" style="margin-bottom:0">
+        <p class="eyebrow">Who we are</p>
+        <h2 id="about-title">Most brands are seen. <em>Few are remembered.</em></h2>
+      </div>
+      <div class="about-cols">
+        <p>Memora is a Ugandan branding and experiential agency based in Namugongo, Kampala. We work with brand teams, agencies, energy companies, schools and growing businesses.</p>
+        <p>Our team has designed key visuals, activation set-ups and presentations for some of the country's best-known consumer brands. We bring that standard to every client, from a national launch to a neighbourhood business finding its look.</p>
+      </div>
+      <div class="facts">
+        <div><b>3 disciplines</b><span>Activation, brand and content in one accountable team</span></div>
+        <div><b>48 hours</b><span>To a first draft on plan work</span></div>
+        <div><b>2 hours</b><span>To a reply on WhatsApp</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="work" aria-labelledby="work-title">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Selected work by our team</p>
+        <h2 id="work-title">Spaces, stories and launches</h2>
+        <p class="lede">Activations people step into, key visuals with energy, and decks that sell the idea. Tap any project for the detail.</p>
+      </div>
+      <div class="filters" role="group" aria-label="Filter work">
+        <button class="chip" aria-pressed="true" data-f="all">All</button>
+        <button class="chip" aria-pressed="false" data-f="activation">Activations</button>
+        <button class="chip" aria-pressed="false" data-f="campaign">Campaigns</button>
+        <button class="chip" aria-pressed="false" data-f="launch">Launches</button>
+        <button class="chip" aria-pressed="false" data-f="brand">Brand &amp; decks</button>
+      </div>
+      <div class="grid" id="grid"></div>
+      <p class="credit">Work shown was created by members of the Memora creative team, much of it in collaboration with partner agencies. Brand names and marks belong to their owners.</p>
+    </div>
+  </section>
+
+  <dialog id="dlg" aria-labelledby="dlgTitle">
+    <div class="dlg">
+      <img id="dlgImg" alt="">
+      <div class="dlg-body">
+        <button class="close" id="dlgClose">Close</button>
+        <p class="eyebrow" id="dlgTag"></p>
+        <h3 id="dlgTitle" style="font-size:32px"></h3>
+        <p id="dlgText" style="color:var(--bone-2)"></p>
+        <dl>
+          <dt>Made</dt><dd id="dlgMade"></dd>
+          <dt>Role</dt><dd id="dlgRole"></dd>
+        </dl>
+        <p class="small" id="dlgCredit"></p>
+      </div>
+    </div>
+  </dialog>
+
+  <section id="services" class="paper" aria-labelledby="svc-title">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">What we do</p>
+        <h2 id="svc-title">One studio, from the logo to the live moment</h2>
+      </div>
+      <div class="pillars">
+        <div class="pillar">
+          <h3>Activation &amp; Experiential</h3>
+          <ul>
+            <li>Activation concepts and guest journeys</li>
+            <li>3D booth, stand and stage design</li>
+            <li>Backdrops, photo booths and entrance arches</li>
+            <li>Roadshows, sampling and product launches</li>
+            <li>Production management and on-site set-up</li>
+            <li>Event content capture and recap reports</li>
+          </ul>
+        </div>
+        <div class="pillar">
+          <h3>Brand Identity &amp; Strategy</h3>
+          <ul>
+            <li>Brand strategy and positioning</li>
+            <li>Logos and full brand kits</li>
+            <li>Brand guidelines and packaging</li>
+            <li>Company profiles and capability statements</li>
+            <li>Annual reports, brochures and catalogues</li>
+            <li>Signage and stationery</li>
+          </ul>
+        </div>
+        <div class="pillar">
+          <h3>Content &amp; Digital</h3>
+          <ul>
+            <li>Campaign key visuals</li>
+            <li>TikTok-first short video and social content</li>
+            <li>Motion graphics and 2D/3D renders</li>
+            <li>Billboards and posters</li>
+            <li>Pitch decks and presentations</li>
+            <li>Websites and UI design</li>
+          </ul>
+        </div>
+      </div>
+      <div class="new">
+        <div class="new-head">
+          <h3>New for 2026–27</h3>
+          <p class="eyebrow">Built for what the market is buying</p>
+        </div>
+        <div class="new-grid">
+          <div><b>Short-video studio</b><span>Vertical video, creator-style ads and TikTok content calendars.</span></div>
+          <div><b>Creator management</b><span>Shortlist, brief, contract and track the right creators.</span></div>
+          <div><b>AFCON 2027 kit</b><span>Fan zones, viewing-party packs and match-day content for June–July 2027.</span></div>
+          <div><b>Energy comms pack</b><span>Tender-ready profiles, HSE campaigns, signage and community events.</span></div>
+          <div><b>Conference &amp; expo</b><span>Event identity, stage, stands, delegate kits and sponsor decks.</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="experiential" aria-labelledby="exp-title">
+    <div class="wrap exp-grid">
+      <div class="exp-img"><img src="img/nrg_booth2.webp" alt="3D render of a red NRG 106.5FM branded activation booth"></div>
+      <div>
+        <p class="eyebrow">Signature service</p>
+        <h2 id="exp-title" style="margin-top:14px">Experiential, end to end</h2>
+        <ol class="steps">
+          <li><span class="n">1</span><div><b>Concept</b><span>The idea, the guest journey and the content moments.</span></div></li>
+          <li><span class="n">2</span><div><b>Design</b><span>3D renders of booths, backdrops, stage and signage, signed off before anything is built.</span></div></li>
+          <li><span class="n">3</span><div><b>Production</b><span>Fabrication and print through vetted Kampala partners.</span></div></li>
+          <li><span class="n">4</span><div><b>Set-up</b><span>Install, brand check and on-site supervision.</span></div></li>
+          <li><span class="n">5</span><div><b>Recap</b><span>Photos, reach and a report your team can take upstairs.</span></div></li>
+        </ol>
+        <p class="build-for">We build for product launches, festival and concert activations, trade expos, corporate conferences, roadshows and campus activations.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="approach" class="paper" aria-labelledby="ap-title">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">How we work</p>
+        <h2 id="ap-title">Start with the why, then craft the wow</h2>
+      </div>
+      <div class="phases">
+        <div class="phase"><span class="k">PHASE 1</span><h3>Discover</h3><p>Kickoff, brand questionnaire and audience research, ending in a clear creative brief.</p></div>
+        <div class="phase"><span class="k">PHASE 2</span><h3>Create</h3><p>Concepts, mockups and 3D renders, refined with you until they are right.</p></div>
+        <div class="phase"><span class="k">PHASE 3</span><h3>Launch</h3><p>Rollout, on-site set-up and a recap of what worked, with next ideas.</p></div>
+      </div>
+      <div class="promises">
+        <div><b>2 hours</b><span>WhatsApp reply, every working day</span></div>
+        <div><b>48 hours</b><span>First draft on plan work</span></div>
+        <div><b>1 named designer</b><span>Who knows your brand</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="ways" aria-labelledby="ways-title">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Ways to work with us</p>
+        <h2 id="ways-title">Pick the model that fits</h2>
+      </div>
+      <div class="ways">
+        <div class="way"><span class="who">For brand teams</span><h3>Activation projects</h3><p>Event and experiential packages, full builds quoted per brief, or an annual framework contract.</p><span class="price">Packages from UGX 800K</span></div>
+        <div class="way"><span class="who">For BTL &amp; PR agencies</span><h3>Agency design desk</h3><p>Key visuals, adaptations, 3D renders and decks under your agency's name, with a fixed rate card and an NDA as standard.</p><span class="price">Rate card on request</span></div>
+        <div class="way"><span class="who">For SMEs, NGOs &amp; schools</span><h3>Monthly plans</h3><p>A creative team on subscription. Starter, Growth and Partner plans. Pause or cancel anytime.</p><span class="price">From UGX 600K / month</span></div>
+      </div>
+      <div class="offer" role="note"><p class="eyebrow">Founding offer · first 10 clients</p><p class="offer-t"><b>50% off your first month</b> on any monthly plan, and your price <b>locked for life</b>. Brand teams also get a free activation idea and 3D render.</p><a class="btn btn-gold" href="#contact">Claim a founding spot</a></div>
+      <div class="sectors" aria-label="Sectors we serve">
+        <span>Beverage &amp; FMCG</span><span>Telecom &amp; banking</span><span>BTL, event &amp; PR agencies</span><span>Oil, gas &amp; energy</span><span>Construction &amp; solar</span><span>Conferences &amp; expos</span><span>Hospitality &amp; real estate</span><span>Schools &amp; universities</span><span>NGOs</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="notes" class="paper" aria-labelledby="notes-title">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Field notes</p>
+        <h2 id="notes-title">What we're watching in Uganda</h2>
+        <p class="lede">Short reads for brand teams planning the next twelve months.</p>
+      </div>
+      <div class="notes">
+        <article class="note">
+          <div class="fig">10.8M<small>on TikTok</small></div>
+          <h3>TikTok is now Uganda's biggest social app</h3>
+          <p>UCC's Q1 2026 data puts TikTok ahead of WhatsApp (9.9M) and YouTube (6.5M). Short vertical video is no longer optional for consumer brands.</p>
+          <a href="https://www.dignited.com/119612/tiktok-overtakes-whatsapp-as-ugandas-most-used-social-app-ucc-q1-2026-report-shows/" target="_blank" rel="noopener">Source: UCC via Dignited</a>
+        </article>
+        <article class="note">
+          <div class="fig">19 Jun<small>2027</small></div>
+          <h3>AFCON 2027 is the activation season to plan for now</h3>
+          <p>Uganda co-hosts with Kenya and Tanzania, with matches in Kampala, Hoima and Lira. Fan zones and viewing parties will need branding months ahead.</p>
+          <a href="https://allafrica.com/stories/202609230247.html" target="_blank" rel="noopener">Source: AllAfrica</a>
+        </article>
+        <article class="note">
+          <div class="fig">3 GB<small>a month</small></div>
+          <h3>Make it light</h3>
+          <p>Average data use per subscriber fell from 5.3 GB to 3 GB a month in early 2026. Short clips and WhatsApp Status beat long, heavy video.</p>
+          <a href="https://www.dignited.com/119612/tiktok-overtakes-whatsapp-as-ugandas-most-used-social-app-ucc-q1-2026-report-shows/" target="_blank" rel="noopener">Source: UCC via Dignited</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="studio" aria-labelledby="studio-title">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">The studio</p>
+        <h2 id="studio-title">Founders on your WhatsApp, not a chain of managers</h2>
+      </div>
+      <div class="team">
+        <div class="person"><h3>Ben Mutaama</h3><span class="role">Co-founder · [Creative Director]</span><p>[Short bio: brands designed for, years in design]</p></div>
+        <div class="person"><h3>Lennart Owora</h3><span class="role">Co-founder · [Strategy &amp; Partnerships]</span><p>[Short bio: business, projects, corporate network]</p></div>
+        <div class="person"><h3>The creative team</h3><span class="role">Design · 3D · motion</span><p>Backed by vetted print, fabrication, photo and video partners across Kampala.</p></div>
+      </div>
+      <p class="quote">"Our promise is to never deliver the expected. We exist to etch your brand into the memory of your industry."<span>— Ben &amp; Len</span></p>
+    </div>
+  </section>
+
+  <section id="contact" class="paper" aria-labelledby="contact-title">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Start a project</p>
+        <h2 id="contact-title">Let's make it Memora&#8209;ble</h2>
+        <p class="lede">Ask for a free brand check, or a free activation idea and 3D render for your next event. Tell us a little and we'll reply within two working hours.</p>
+      </div>
+      <div class="contact-grid">
+        <form id="enq" novalidate>
+          <label>Your name<input id="f-name" required autocomplete="name"></label>
+          <label>Company<input id="f-co" autocomplete="organization"></label>
+          <label>Phone or email<input id="f-contact" required></label>
+          <label>What do you need?
+            <select id="f-need">
+              <option>An activation or event</option>
+              <option>A brand identity or refresh</option>
+              <option>Monthly content (a plan)</option>
+              <option>Short video / TikTok</option>
+              <option>A company profile or pitch deck</option>
+              <option>Agency design support</option>
+              <option>Something else</option>
+            </select>
+          </label>
+          <label class="full">Timing
+            <select id="f-when">
+              <option>This month (founding offer)</option>
+              <option>In 1–3 months</option>
+              <option>Later this year</option>
+              <option>For AFCON 2027</option>
+            </select>
+          </label>
+          <label class="full">Tell us about it<textarea id="f-msg" placeholder="What are you launching, where, and for whom?"></textarea></label>
+          <div class="form-actions full">
+            <button class="btn btn-gold" type="submit">Prepare my message</button>
+            <span id="f-err" style="color:#9A2B1E;font-size:14px" hidden>Please add your name and a phone number or email.</span>
+          </div>
+          <div class="result" id="result" hidden>
+            <p style="font-weight:700">Your message is ready. Send it to us on WhatsApp or by email.</p>
+            <pre id="msgOut"></pre>
+            <div class="form-actions">
+              <a class="btn btn-gold" id="waLink" href="#" target="_blank" rel="noopener">Open in WhatsApp</a>
+              <button class="btn btn-ghost" type="button" id="copyMsg">Copy message</button>
+            </div>
+          </div>
+        </form>
+        <aside class="contact-card" aria-label="Contact details">
+          <div><p class="k">Studio</p><p class="v">Namugongo, Kampala, Uganda</p><p class="s">Full address coming soon</p></div>
+          <div><p class="k">Call / WhatsApp</p><p class="v">+256 784 215 671<button class="copy" data-copy="+256784215671">Copy</button></p><p class="v">+256 751 500 952<button class="copy" data-copy="+256751500952">Copy</button></p></div>
+          <div><p class="k">Email</p><p class="v">info@memoraconcepts.com<button class="copy" data-copy="info@memoraconcepts.com">Copy</button></p></div>
+          <div><p class="k">Hours</p><p class="v">Mon–Fri 8:30–18:00 · Sat 9:00–13:00</p></div>
+        </aside>
+      </div>
+    </div>
+  </section>
+</main>
+
+<button class="mo-fab" id="moFab" aria-expanded="false" aria-controls="mo"><span class="dot"><img src="img/mark_colour.png" alt=""></span>Ask Mo</button>
+<div class="mo" id="mo" role="dialog" aria-label="Ask Mo, the Memora assistant" hidden>
+  <div class="mo-head">
+    <img src="img/mark_colour.png" alt="" style="width:30px;height:30px;object-fit:contain">
+    <div><b>Mo · Memora</b><span id="moMode">Usually replies instantly</span></div>
+    <button class="x" id="moClose">Close</button>
+  </div>
+  <div class="mo-log" id="moLog" aria-live="polite"></div>
+  <div class="mo-chips" id="moChips"></div>
+  <form class="mo-form" id="moForm">
+    <input id="moIn" autocomplete="off" placeholder="Ask about prices, activations, timing…" aria-label="Message Mo">
+    <button type="submit">Send</button>
+  </form>
+  <p class="mo-foot">Mo is Memora's assistant. A person from the team follows up on every enquiry.</p>
+</div>
+<button class="ins-btn" id="insBtn" hidden>Site insights</button>
+<dialog id="ins" aria-labelledby="insTitle">
+  <div class="ins-body">
+    <div style="display:flex;justify-content:space-between;align-items:center;gap:12px">
+      <h3 id="insTitle" style="font-size:28px">Site insights</h3>
+      <div style="display:flex;gap:8px"><button class="close" id="insRefresh">Refresh</button><button class="close" id="insClose">Close</button></div>
+    </div>
+    <p class="empty" id="insNote">Only you can see this. Visits are logged for visitors signed in to Claude while the site runs here; the public version needs the hosted tracker.</p>
+    <div class="kpis" id="insKpis"></div>
+    <h3>Leads from Mo</h3>
+    <div class="tbl"><table><thead><tr><th>When</th><th>Name</th><th>Contact</th><th>Need</th><th>Notes</th></tr></thead><tbody id="insLeads"></tbody></table></div>
+    <h3>Visitors</h3>
+    <div class="tbl"><table><thead><tr><th>Last seen</th><th>Visits</th><th>Device</th><th>Came from</th><th>Sections viewed</th><th>Chats</th></tr></thead><tbody id="insVisits"></tbody></table></div>
+  </div>
+</dialog>
+
+<footer>
+  <div class="wrap">
+    <img src="img/logo_colour.png" alt="Memora Concepts Ltd">
+    <span>Memora · Built to be remembered · #MakeItMemorable</span>
+    <span>© 2026 Memora Concepts Ltd · Namugongo, Kampala</span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var W=[
+    {t:'Tusker Lite',k:'activation',tag:'Activation',img:'tusker_booth',s:'Photo booth and backdrop artwork',made:'Photo booth artwork, backdrops',role:'Design by our team with a partner agency',x:'Neon-green booth and backdrop artwork built for photos and sharing.',wide:true},
+    {t:'NRG 106.5FM',k:'activation',tag:'Activation',img:'nrg_booth',s:'High School Energizer activation walls',made:'3D booth renders, wall graphics',role:'Design by our team',x:'Graffiti-style activation walls and booth renders for a school tour.'},
+    {t:'MTN Pulse',k:'campaign',tag:'Campaign',img:'pulse_nation',s:'Pulse Nation campaign and event branding',made:'Key visual, social set, event branding',role:'Design by our team with a partner agency',x:'A youth campaign key visual carried from social posts to event walls.'},
+    {t:'Smirnoff',k:'campaign',tag:'Campaign',img:'smirnoff',s:'Fiestas artwork for Nyege Nyege',made:'Campaign artwork, banners',role:'Design by our team with a partner agency',x:'High-energy festival artwork for the Fiestas campaign.'},
+    {t:'Toyota',k:'launch',tag:'Launch',img:'toyota',s:'2022 vehicle unveiling',made:'Banners, venue branding',role:'Design by our team with a partner agency',x:'Launch banners and venue branding for a multi-model vehicle unveiling.'},
+    {t:'Minute Maid',k:'campaign',tag:'Campaign',img:'minute_maid',s:'"Boost the Moment" key visual',made:'Key visual, adaptations',role:'Design by our team with a partner agency',x:'A bright product key visual built for retail and social.'},
+    {t:'Guinness',k:'brand',tag:'Deck',img:'guinness',s:'Brighthouse presentation design',made:'Presentation design',role:'Design by our team with a partner agency',x:'A pitch presentation with a bold collage art direction.'},
+    {t:'Vivo Energy',k:'brand',tag:'Deck',img:'vivo',s:'Shell V-Power agency brief deck',made:'Presentation design',role:'Design by our team with a partner agency',x:'An agency brief deck for pit-stop activations and a premium experience.'},
+    {t:'FIDA Uganda',k:'brand',tag:'Brand',img:'fida',s:'Campaign branding and merchandise',made:'Campaign merchandise, flags, masks',role:'Design by our team',x:'Campaign branding applied across merchandise for a rights campaign.'},
+    {t:'Bellazuri',k:'activation',tag:'Concept',img:'bellazuri_1',s:'Beauty Soirée activation concept',made:'Branding and activation proposal',role:'Concept pitch by Memora',x:'A four-tier proposal: brand refresh, event strategy, teaser campaign and soirée execution.'},
+    {t:'Logo design',k:'brand',tag:'Brand',img:'logos',s:'Identities for Ugandan businesses',made:'Logos and brand marks',role:'Memora clients and team work',x:'Marks for businesses including Kores Eye Care and Tarn Energy.'}
+  ];
+  var grid=document.getElementById('grid'), reel=document.getElementById('reel');
+  function card(w,i){
+    var b=document.createElement('button'); b.className='card'; b.dataset.k=w.k; b.dataset.i=i;
+    
+    b.innerHTML='<div class="ph"><img loading="lazy" src="img/'+w.img+'.webp" alt="'+w.t+': '+w.s+'"></div><div class="meta"><h3>'+w.t+'</h3><span class="tag">'+w.tag+'</span></div><p>'+w.s+'</p>';
+    b.addEventListener('click',function(){openW(i)}); return b;
+  }
+  W.forEach(function(w,i){grid.appendChild(card(w,i))});
+  function narrow(){var m=window.matchMedia('(max-width:600px)').matches;grid.querySelectorAll('.card').forEach(function(c){var w=W[+c.dataset.i];var on=(w.wide&&!m&&currentF==='all');c.style.gridColumn=on?'span 2':'';c.classList.toggle('wide',on)})}
+  var currentF='all';
+  document.querySelectorAll('.chip').forEach(function(c){c.addEventListener('click',function(){
+    currentF=c.dataset.f;
+    document.querySelectorAll('.chip').forEach(function(x){x.setAttribute('aria-pressed',x===c?'true':'false')});
+    grid.querySelectorAll('.card').forEach(function(el){el.hidden=!(currentF==='all'||el.dataset.k===currentF)});
+    narrow();
+  })});
+  window.addEventListener('resize',narrow); narrow();
+  // reel: two copies for a seamless loop
+  var picks=[0,2,4,1,3,5,6,9];
+  for(var r=0;r<2;r++){picks.forEach(function(i,n){var w=W[i];var f=document.createElement('div');f.className='frame';if(r)f.setAttribute('aria-hidden','true');
+    f.innerHTML='<img src="img/'+w.img+'.webp" alt="'+(r?'':w.t)+'"><span>M–'+String(n+1).padStart(2,'0')+' · '+w.t.toUpperCase()+'</span>';reel.appendChild(f)})}
+  // dialog
+  var d=document.getElementById('dlg');
+  function openW(i){var w=W[i];
+    document.getElementById('dlgImg').src='img/'+w.img+'.webp';document.getElementById('dlgImg').alt=w.t+': '+w.s;
+    document.getElementById('dlgTag').textContent=w.tag;document.getElementById('dlgTitle').textContent=w.t;
+    document.getElementById('dlgText').textContent=w.x;document.getElementById('dlgMade').textContent=w.made;document.getElementById('dlgRole').textContent=w.role;
+    document.getElementById('dlgCredit').textContent=w.role.indexOf('partner')>-1?'Created by the Memora creative team in collaboration with a partner agency. Brand names and marks belong to their owners.':'';
+    if(d.showModal) d.showModal(); else d.setAttribute('open','');}
+  document.getElementById('dlgClose').addEventListener('click',function(){d.close?d.close():d.removeAttribute('open')});
+  d.addEventListener('click',function(e){if(e.target===d) d.close()});
+  // menu
+  var mb=document.getElementById('menuBtn'),nav=document.getElementById('nav');
+  mb.addEventListener('click',function(){var o=nav.classList.toggle('open');mb.setAttribute('aria-expanded',o)});
+  nav.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){nav.classList.remove('open');mb.setAttribute('aria-expanded','false')})});
+  // copy helpers
+  function copy(text,btn){var done=function(){var o=btn.textContent;btn.textContent='Copied';setTimeout(function(){btn.textContent=o},1500)};
+    try{navigator.clipboard.writeText(text).then(done,function(){sel(btn)})}catch(e){sel(btn)}}
+  function sel(btn){var p=btn.closest('.v')||document.getElementById('msgOut');var r=document.createRange();r.selectNodeContents(p);var s=window.getSelection();s.removeAllRanges();s.addRange(r)}
+  document.querySelectorAll('.copy').forEach(function(b){b.addEventListener('click',function(){copy(b.dataset.copy,b)})});
+  // form
+  var f=document.getElementById('enq');
+  f.addEventListener('submit',function(e){e.preventDefault();
+    var n=document.getElementById('f-name').value.trim(),c=document.getElementById('f-contact').value.trim();
+    var err=document.getElementById('f-err'); if(!n||!c){err.hidden=false;return} err.hidden=true;
+    var co=document.getElementById('f-co').value.trim();
+    var msg='Hello Memora, I\'m '+n+(co?' from '+co:'')+'.\nI need: '+document.getElementById('f-need').value+'\nTiming: '+document.getElementById('f-when').value+'\n'+(document.getElementById('f-msg').value.trim()?'Details: '+document.getElementById('f-msg').value.trim()+'\n':'')+'Reach me on: '+c;
+    document.getElementById('msgOut').textContent=msg;
+    document.getElementById('waLink').href='https://wa.me/256784215671?text='+encodeURIComponent(msg);
+    var r=document.getElementById('result'); r.hidden=false; r.scrollIntoView({block:'nearest'});
+  });
+  document.getElementById('copyMsg').addEventListener('click',function(){copy(document.getElementById('msgOut').textContent,this)});
+})();
+</script>
+<script>
+(function(){
+  var KB=[
+    'Memora (legal name Memora Concepts Ltd) is a branding and experiential agency in Namugongo, Kampala, Uganda. Tagline: "Built to be remembered." Campaign line: "Make it Memora-ble."',
+    'Three disciplines: 1) Activation & Experiential: activation concepts, 3D booth/stand/stage design, backdrops, photo booths, entrance arches, roadshows, product launches, production management through vetted Kampala partners, on-site set-up, event content capture and recap reports. 2) Brand Identity & Strategy: strategy, logos, brand kits, guidelines, packaging, company profiles, capability statements, annual reports, signage. 3) Content & Digital: campaign key visuals, TikTok-first short video and social content, motion graphics, 2D/3D renders, billboards, pitch decks, websites.',
+    'New for 2026-27: short-video studio, creator/influencer management, AFCON 2027 activation kit (fan zones, viewing-party kits for bars and hotels, match-day content; AFCON starts 19 June 2027 with matches in Kampala, Hoima and Lira), energy and oil & gas comms pack (tender-ready profiles, HSE campaigns, signage, community events), conference & expo package.',
+    'Ways to work: Activation projects for brand teams, event packages from UGX 800,000 (Starter 800K, Professional from 2M, Premium from 5M), full experiential builds quoted per brief as design fee plus production at cost plus a management fee. Agency design desk for BTL/PR agencies, white-label, fixed rate card, NDA standard. Monthly plans for SMEs, NGOs and schools: Starter UGX 600,000/month (8 designs, 48h first drafts), Growth UGX 1,500,000/month (up to 20 designs incl. motion, content calendar, dedicated designer), Partner from UGX 3,500,000/month (multi-channel campaigns, 24h priority, an event kit each quarter). Pay by MTN MoMo, Airtel Money or bank transfer. One-offs: logo from UGX 400K, brand kit from 1.5M, company profile from 500K, pitch deck from 350K. Projects take a 50% deposit. Prices are starting points; final quotes depend on scope.',
+    'Promises: reply on WhatsApp within 2 working hours, first draft within 48 hours on plan work, one named designer per client. Process: Discover, Create, Launch.',
+    'Founding offer: the first 10 clients get 50% off their first month on any monthly plan and their price locked for life. Free offers: a free 15-minute brand check with three quick wins; for brand teams, a free activation idea and 3D render for their next event.',
+    'Contact: WhatsApp/call +256 784 215 671 or +256 751 500 952, email info@memoraconcepts.com. Studio: Namugongo, Kampala (full address to follow). Never mention Ntinda.',
+    'Credentials: the portfolio work for brands like Tusker Lite, MTN Pulse, Smirnoff, Guinness, Toyota, Minute Maid and Vivo Energy was made by Memora team members, much of it in collaboration with partner agencies. Never call these brands Memora clients or claim results or statistics that are not stated here.'
+  ].join('\n');
+  var RULES='You are Mo, the friendly website assistant for Memora. Answer in 1-4 short sentences, plain warm English, no markdown headings. Use ONLY the facts below; if you do not know, say a person from the team will confirm and offer WhatsApp. Never invent prices, clients, results or dates. When the visitor wants to start a project or asks for a quote, ask for their name, a phone or email, and what they need; once you have name and contact, call the save_lead tool, then confirm the team will reply within 2 working hours. Do not ask for anything else personal.\n\nFACTS:\n'+KB;
+
+  var log=document.getElementById('moLog'),chips=document.getElementById('moChips'),form=document.getElementById('moForm'),inp=document.getElementById('moIn');
+  var panel=document.getElementById('mo'),fab=document.getElementById('moFab');
+  var turns=[],sample=null,canTools=false,busy=false,lead={},flow=null,opened=false;
+  var db=null,user=null,uid=null,vdoc=null,vstate=null;
+
+  function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+  function linkify(s){return esc(s).replace(/(https:\/\/wa\.me\/[^\s]+)/g,'<a href="$1" target="_blank" rel="noopener">Open WhatsApp</a>')}
+  function say(text,who){var d=document.createElement('div');d.className='msg '+(who||'bot');d.innerHTML=linkify(text);log.appendChild(d);log.scrollTop=log.scrollHeight;return d}
+  function setChips(list){chips.innerHTML='';list.forEach(function(c){var b=document.createElement('button');b.type='button';b.textContent=c;b.onclick=function(){handle(c)};chips.appendChild(b)})}
+  var MAIN=['What do you do?','Prices','Founding offer','Book a free brand check','Activations & events','AFCON 2027 kit','Talk to a person'];
+
+  function wa(txt){return 'https://wa.me/256784215671?text='+encodeURIComponent(txt)}
+
+  // Rule-based answers: work on any host, no account needed
+  var A=[
+    [/discount|offer|promo|founding|deal|half/i,'Our founding offer: the first 10 clients get 50% off their first month on any monthly plan, and their price is locked for life. Spots are limited, so tap "Book a free brand check" to claim one.'],
+    [/price|cost|how much|budget|rate|charge|fee|plan/i,'Founding offer: 50% off your first month for our first 10 clients. Monthly plans start at UGX 600K (Starter), UGX 1.5M (Growth) and from UGX 3.5M (Partner). Event packages start at UGX 800K, a logo from UGX 400K and a company profile from UGX 500K. Final quotes depend on scope. Want a quote? Tap "Book a free brand check".'],
+    [/activation|event|booth|stand|backdrop|launch|experien|roadshow|expo|conference|photo booth/i,'Experiential is our signature: concept, 3D design, production through vetted partners, on-site set-up and a recap report. Event packages start at UGX 800K, and full builds are quoted per brief. Brand teams can ask for a free activation idea and 3D render.'],
+    [/afcon|football|fan zone|viewing|match/i,'AFCON 2027 starts on 19 June 2027, with matches in Kampala, Hoima and Lira. Our AFCON kit covers fan-zone design, viewing-party packs for bars and hotels, match-day content and merchandise. We are booking briefs now.'],
+    [/tiktok|video|reel|social|content|influenc|creator/i,'We make TikTok-first short video, social content calendars and creator campaigns. TikTok is now Uganda\'s biggest social app, so short vertical video is built into our Growth plan.'],
+    [/logo|brand|identity|rebrand|guideline|profile|deck|presentation/i,'We design logos and full brand kits, company profiles, capability statements and pitch decks. A logo starts at UGX 400K, a full brand kit at UGX 1.5M and a company profile at UGX 500K.'],
+    [/oil|gas|energy|hse|safety|tender|construction|solar/i,'Our energy comms pack covers tender-ready company profiles, HSE campaign identities, safety signage and community engagement events, for contractors and suppliers in the sector.'],
+    [/agency|subcontract|white.?label|overflow/i,'Agencies use us as an overflow design desk: key visuals, adaptations, 3D renders and decks under your name, with a fixed rate card and an NDA as standard.'],
+    [/where|location|office|address|namugongo|visit/i,'Our studio is in Namugongo, Kampala. The full address is coming soon, so message us on WhatsApp to arrange a visit.'],
+    [/long|turnaround|fast|deadline|time|when/i,'You get a reply on WhatsApp within 2 working hours and a first draft within 48 hours on plan work. Event timelines run from 3 to 14 days depending on the package.'],
+    [/work|portfolio|client|example|brands/i,'Our team has designed for brands like Tusker Lite, MTN Pulse, Smirnoff, Toyota and Guinness, much of it with partner agencies. Scroll to "Selected work" to see it.'],
+    [/pay|momo|mobile money|airtel|bank/i,'You can pay by MTN MoMo, Airtel Money or bank transfer. Monthly plans are paid in advance, and projects take a 50% deposit.'],
+    [/contact|whatsapp|call|phone|email|human|person|talk/i,'You can reach the team on WhatsApp or by phone at +256 784 215 671 or +256 751 500 952, or email info@memoraconcepts.com.\n'+wa('Hello Memora, I found you on your website.')]
+  ];
+  function ruleAnswer(q){for(var i=0;i<A.length;i++){if(A[i][0].test(q))return A[i][1]}return null}
+
+  function startLead(){flow='name';say("Great, let's set that up. What's your name?");setChips([])}
+  function leadStep(text){
+    if(flow==='name'){lead.name=text;flow='contact';say('Thanks, '+text.split(' ')[0]+'. What phone number or email should we use?');return true}
+    if(flow==='contact'){lead.contact=text;flow='need';say('And what do you need?');setChips(['An activation or event','Brand identity','Monthly content','Short video / TikTok','Company profile or deck','AFCON 2027 kit']);return true}
+    if(flow==='need'){lead.need=text;flow=null;finishLead();return true}
+    return false
+  }
+  function finishLead(notes){
+    lead.notes=notes||lead.notes||'';
+    saveLead(lead);
+    var m='Hello Memora, I\'m '+lead.name+'. I need: '+lead.need+(lead.notes?'. '+lead.notes:'')+'. Reach me on '+lead.contact+'.';
+    say('Done. The team will reply within 2 working hours. To get things moving sooner, send it on WhatsApp too:\n'+wa(m));
+    lead={};setChips(MAIN)
+  }
+
+  async function ask(q){
+    if(sample){
+      turns.push({role:'user',content:q});
+      var bubble=say('Thinking…');busy=true;
+      try{
+        var opts={modelTier:'quick',cache:false,onText:function(u){bubble.innerHTML=linkify(u.text);log.scrollTop=log.scrollHeight}};
+        if(canTools){delete opts.cache;opts.tools=[{name:'save_lead',description:'Save a visitor enquiry for the Memora team once you have their name and a phone or email. Returns "saved".',inputSchema:{type:'object',properties:{name:{type:'string'},contact:{type:'string'},need:{type:'string'},notes:{type:'string'}},required:['name','contact']},execute:function(i){saveLead({name:String(i.name||''),contact:String(i.contact||''),need:String(i.need||''),notes:String(i.notes||'')});return 'saved'}}]}
+        var r=await sample([{role:'user',content:RULES}].concat(turns.slice(-12)),opts);
+        bubble.innerHTML=linkify(r.text);turns.push({role:'assistant',content:r.text});bump('chats');
+      }catch(e){
+        turns.pop();
+        if(e&&(e.code==='not_granted'||e.code==='sampling_disabled'||e.code==='not_declared'||e.code==='capability_disabled')){sample=null;document.getElementById('moMode').textContent='Quick answers'}
+        bubble.innerHTML=linkify(ruleAnswer(q)||'I\'ll pass that to the team. The fastest way is WhatsApp:\n'+wa('Hello Memora, '+q));
+      }finally{busy=false}
+      return
+    }
+    var a=ruleAnswer(q);bump('chats');
+    say(a||'Good question. A person from the team can answer that properly. Want to leave your details, or message us on WhatsApp?\n'+wa('Hello Memora, '+q));
+    if(!a)setChips(['Leave my details','Talk to a person','Prices'])
+  }
+
+  function handle(text){
+    text=String(text).trim();if(!text||busy)return;
+    say(text,'me');
+    if(flow&&leadStep(text))return;
+    if(/^(book a free brand check|leave my details|start a project|get a quote)$/i.test(text)&&!sample){startLead();return}
+    if(/^talk to a person$/i.test(text)){say('You can reach the team on WhatsApp or by phone at +256 784 215 671 or +256 751 500 952. Email: info@memoraconcepts.com\n'+wa('Hello Memora, I\'d like to talk to someone.'));return}
+    if(/^what do you do\??$/i.test(text)&&!sample){say('We\'re Memora, a branding and experiential agency in Namugongo, Kampala. We do activations and events, brand identity, and content including TikTok-first video. In short: we make brands memorable.');return}
+    ask(text)
+  }
+  form.addEventListener('submit',function(e){e.preventDefault();var v=inp.value;inp.value='';handle(v)});
+
+  function open(){panel.hidden=false;fab.setAttribute('aria-expanded','true');if(!opened){opened=true;say('Hi, I\'m Mo from Memora. I can tell you about our services, prices and timing, or set up a free brand check. What are you working on?');setChips(MAIN)}inp.focus()}
+  function close(){panel.hidden=true;fab.setAttribute('aria-expanded','false');fab.focus()}
+  fab.addEventListener('click',function(){panel.hidden?open():close()});
+  document.getElementById('moClose').addEventListener('click',close);
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!panel.hidden)close()});
+
+  // Tracking and leads (db, signed-in viewers only)
+  var dirty=false,writing=false,timer=null;
+  function device(){var w=window.innerWidth;return w<700?'Phone':w<1100?'Tablet':'Desktop'}
+  function ref(){try{return document.referrer?new URL(document.referrer).hostname:'Direct'}catch(e){return 'Direct'}}
+  function queue(){dirty=true;clearTimeout(timer);timer=setTimeout(flush,3000)}
+  async function flush(){if(!vdoc||!vstate||writing||!dirty)return;writing=true;dirty=false;try{await vdoc.set(JSON.parse(JSON.stringify(vstate)))}catch(e){}writing=false;if(dirty)queue()}
+  function bump(k){if(!vstate)return;vstate[k]=(vstate[k]||0)+1;queue()}
+  function saveLead(l){if(!vstate)return;vstate.leads=(vstate.leads||[]).concat([{at:new Date().toISOString(),name:l.name||'',contact:l.contact||'',need:l.need||'',notes:l.notes||''}]).slice(-20);queue();flush()}
+  function watchSections(){
+    if(!('IntersectionObserver' in window))return;
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting&&vstate){var id=e.target.id||e.target.getAttribute('aria-labelledby');if(id&&vstate.sections.indexOf(id)<0){vstate.sections.push(id);queue()}}})},{threshold:.35});
+    document.querySelectorAll('main section').forEach(function(s){io.observe(s)});
+  }
+  (async function(){
+    if(!window.claude||!claude.use)return;
+    try{sample=await claude.use('sample')}catch(e){sample=null}
+    if(sample){try{var lim=await sample.limits();canTools=!!(lim&&lim.tools)}catch(e){canTools=false}document.getElementById('moMode').textContent='Answers powered by Claude'}
+    try{user=await claude.use('user');db=await claude.use('db')}catch(e){}
+    if(user&&db){
+      try{uid=await user.id()}catch(e){uid=null}
+      if(uid){
+        try{
+          vdoc=db.doc('visits/'+uid);var s=await vdoc.get();var now=new Date().toISOString();
+          vstate=s.exists?JSON.parse(JSON.stringify(s.data())):{first:now,visits:0,sections:[],leads:[],chats:0};
+          vstate.last=now;vstate.visits=(vstate.visits||0)+1;vstate.device=device();vstate.from=vstate.from||ref();vstate.sections=vstate.sections||[];
+          dirty=true;flush();watchSections();
+        }catch(e){vdoc=null;vstate=null}
+      }
+      var admin=false;try{admin=user.isOwner()||user.canEdit()}catch(e){}
+      if(admin)document.getElementById('insBtn').hidden=false;
+    }
+  })();
+
+  // Owner insights
+  var ins=document.getElementById('ins');
+  function fmt(t){try{return new Date(t).toLocaleString(undefined,{day:'numeric',month:'short',hour:'2-digit',minute:'2-digit'})}catch(e){return t||''}}
+  async function loadIns(){
+    var k=document.getElementById('insKpis'),L=document.getElementById('insLeads'),V=document.getElementById('insVisits');
+    k.innerHTML='<div><b>…</b><span>Loading</span></div>';L.innerHTML='';V.innerHTML='';
+    try{
+      var snap=await db.collection('visits').orderBy('last','desc').limit(500).get();
+      var rows=snap.docs.map(function(d){return d.data()||{}});
+      var visits=0,chats=0,leads=[],week=0,cut=Date.now()-7*864e5;
+      rows.forEach(function(r){visits+=r.visits||0;chats+=r.chats||0;(r.leads||[]).forEach(function(l){leads.push(l)});if(Date.parse(r.last)>cut)week++});
+      leads.sort(function(a,b){return a.at<b.at?1:-1});
+      k.innerHTML='<div><b>'+rows.length+'</b><span>Unique visitors</span></div><div><b>'+week+'</b><span>Active in last 7 days</span></div><div><b>'+visits+'</b><span>Total visits</span></div><div><b>'+chats+'</b><span>Mo conversations</span></div><div><b>'+leads.length+'</b><span>Leads captured</span></div>';
+      L.innerHTML=leads.length?leads.map(function(l){return '<tr><td>'+esc(fmt(l.at))+'</td><td>'+esc(l.name)+'</td><td>'+esc(l.contact)+'</td><td>'+esc(l.need)+'</td><td>'+esc(l.notes)+'</td></tr>'}).join(''):'<tr><td colspan="5" class="empty">No leads yet. They appear here when a visitor leaves details with Mo.</td></tr>';
+      V.innerHTML=rows.length?rows.map(function(r){return '<tr><td>'+esc(fmt(r.last))+'</td><td>'+(r.visits||0)+'</td><td>'+esc(r.device||'')+'</td><td>'+esc(r.from||'')+'</td><td>'+esc((r.sections||[]).join(', '))+'</td><td>'+(r.chats||0)+'</td></tr>'}).join(''):'<tr><td colspan="6" class="empty">No visits logged yet.</td></tr>';
+    }catch(e){k.innerHTML='<div><b>–</b><span>Could not load insights right now. Try Refresh.</span></div>'}
+  }
+  document.getElementById('insBtn').addEventListener('click',function(){ins.showModal();loadIns()});
+  document.getElementById('insRefresh').addEventListener('click',loadIns);
+  document.getElementById('insClose').addEventListener('click',function(){ins.close()});
+})();
+</script>
+
+</body>
+</html>
