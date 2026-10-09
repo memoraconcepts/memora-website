@@ -41,7 +41,15 @@ section{padding-block:clamp(56px,8vw,104px)}
 .top nav a{text-decoration:none;font-size:15px;color:var(--bone-2)}
 .top nav a:hover,.top nav a[aria-current]{color:var(--bone)}
 .top nav .btn{padding:9px 16px;font-size:14px;color:var(--stage)}
-@media (max-width:720px){.top nav a:not(.btn){display:none}}
+.top .mob-cta{display:none;padding:9px 16px;font-size:14px;color:var(--stage)}
+@media (max-width:720px){
+  .top .wrap{flex-wrap:wrap;row-gap:10px}
+  .top nav{order:3;width:100%;flex-wrap:nowrap;overflow-x:auto;gap:18px;padding-bottom:4px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+  .top nav::-webkit-scrollbar{display:none}
+  .top nav a{white-space:nowrap;font-size:15px}
+  .top nav .btn{display:none}
+  .top .mob-cta{display:inline-flex}
+}
 
 .crumbs{font-size:14px;color:var(--bone-2);display:flex;gap:8px;flex-wrap:wrap;margin-bottom:22px}
 .crumbs a{text-decoration:none}
@@ -102,3 +110,70 @@ html{-webkit-text-size-adjust:100%}
 section,[id]{scroll-margin-top:84px}
 a,button,summary{-webkit-tap-highlight-color:transparent;touch-action:manipulation}
 .top{background:var(--stage)}
+
+/* ---- Phase 1 pages: work, pricing, about, contact ---- */
+.hero-plain .hero-copy{max-width:900px}
+.credit-paper{color:var(--ink-2);margin:0 0 clamp(32px,5vw,56px)}
+.work-group{display:flex;flex-direction:column;gap:24px}
+.work-group + .work-group{margin-top:clamp(48px,7vw,88px)}
+.work-group h2{border-bottom:2px solid var(--ink);padding-bottom:14px}
+.work-list{display:flex;flex-direction:column;gap:clamp(32px,5vw,56px)}
+.work-item{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:clamp(20px,4vw,48px);align-items:center}
+@media (max-width:760px){.work-item{grid-template-columns:minmax(0,1fr)}}
+.work-item figure{margin:0;border-radius:10px;overflow:hidden;background:var(--paper-2)}
+.work-item img{width:100%;height:auto}
+.work-copy{display:flex;flex-direction:column;gap:10px;min-width:0}
+.work-copy h3{font-size:clamp(24px,3vw,32px)}
+.work-s{font-weight:700;color:var(--ink)}
+.work-copy p{color:var(--ink-2)}
+.work-copy dl{display:grid;grid-template-columns:auto minmax(0,1fr);gap:4px 16px;margin:6px 0 0;font-size:15px}
+.work-copy dt{font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold-deep);padding-top:3px}
+.work-copy dd{margin:0;color:var(--ink-2)}
+.plans{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+@media (max-width:860px){.plans{grid-template-columns:minmax(0,1fr)}}
+.plan{border:1px solid var(--line-l);border-radius:12px;padding:clamp(20px,3vw,28px);display:flex;flex-direction:column;gap:14px;background:var(--paper)}
+.plan-mid{background:var(--ink);color:var(--bone);border-color:var(--ink)}
+.plan-mid .eyebrow{color:var(--gold)}
+.plan-mid .plan-for,.plan-mid .list{color:var(--bone-2)}
+.plan-mid .list li::before{background:var(--gold)}
+.plan-price{font-family:var(--display);font-size:clamp(32px,4vw,42px);font-weight:700;line-height:1;font-variant-numeric:tabular-nums}
+.plan-price span{font-size:16px;font-weight:600;vertical-align:top;margin-right:2px}
+.plan-price small{display:block;font-family:var(--body);font-size:14px;font-weight:500;margin-top:8px;opacity:.75}
+.plan-for{color:var(--ink-2)}
+.list-1{grid-template-columns:minmax(0,1fr)!important}
+.tbl-wrap{overflow-x:auto;border:1px solid var(--line-d);border-radius:10px}
+.price-table{width:100%;border-collapse:collapse;font-size:16px}
+.price-table th,.price-table td{padding:14px 18px;border-bottom:1px solid var(--line-d);text-align:left}
+.price-table tr:last-child th,.price-table tr:last-child td{border-bottom:0}
+.price-table th{font-weight:500;color:var(--bone)}
+.price-table td{font-family:var(--mono);font-size:14px;color:var(--gold);white-space:nowrap;text-align:right;font-variant-numeric:tabular-nums}
+.note{margin-top:16px;font-size:14px;color:var(--bone-2);max-width:70ch}
+.steps-3{grid-template-columns:repeat(3,minmax(0,1fr))}
+@media (max-width:760px){.steps-3{grid-template-columns:minmax(0,1fr)}}
+.steps-3 .n{font-family:var(--display);font-size:28px;font-weight:700;color:var(--gold);letter-spacing:0}
+.people{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+@media (max-width:760px){.people{grid-template-columns:minmax(0,1fr)}}
+.person{background:var(--paper-2);border-radius:10px;padding:22px;display:flex;flex-direction:column;gap:6px}
+.person .role{font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold-deep)}
+.person p:not(.role){color:var(--ink-2)}
+.quote{margin:clamp(32px,5vw,56px) 0 0;font-family:var(--display);font-size:clamp(22px,3vw,34px);line-height:1.25;max-width:30ch}
+.quote cite{display:block;margin-top:14px;font-family:var(--mono);font-style:normal;font-size:13px;letter-spacing:.12em;color:var(--gold-deep)}
+.tags-dark span{border-color:var(--line-d);color:var(--bone-2)}
+.contact-grid{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:clamp(24px,4vw,48px);align-items:start}
+@media (max-width:860px){.contact-grid{grid-template-columns:minmax(0,1fr)}}
+.enq{display:flex;flex-direction:column;gap:14px}
+.enq h2{font-size:clamp(26px,3vw,34px)}
+.enq .lede{color:var(--ink-2)}
+.enq label{display:flex;flex-direction:column;gap:6px;font-size:14px;font-weight:600;color:var(--ink)}
+.enq input,.enq select,.enq textarea{font:inherit;font-size:16px;color:var(--ink);background:#FBF8F1;border:1px solid var(--line-l);border-radius:8px;padding:12px 14px;width:100%}
+.enq input:focus-visible,.enq select:focus-visible,.enq textarea:focus-visible{outline:2px solid var(--gold-deep);outline-offset:1px}
+.enq button{align-self:flex-start;cursor:pointer;font:inherit;font-weight:700}
+.enq .err{color:var(--gold-deep);font-weight:600}
+#f-out{display:flex;flex-direction:column;gap:10px;align-items:flex-start}
+#f-out[hidden]{display:none}
+.contact-card{background:var(--ink);color:var(--bone);border-radius:12px;padding:clamp(22px,3vw,32px);display:flex;flex-direction:column;gap:20px}
+.contact-card .k{font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold)}
+.contact-card .v{font-size:18px;margin-top:4px}
+.contact-card .v a{text-decoration:none}
+.contact-card .v a:hover{color:var(--gold)}
+.contact-card .s{font-size:14px;color:var(--bone-2);margin-top:4px}
