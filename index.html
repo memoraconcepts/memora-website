@@ -489,7 +489,7 @@ img{image-rendering:auto}
 
   <section id="experiential" aria-labelledby="exp-title">
     <div class="wrap exp-grid">
-      <div class="exp-img"><img loading="lazy" width="1200" height="630" src="img/nrg_booth2.webp" srcset="img/nrg_booth2-640.webp 640w, img/nrg_booth2.webp 1200w, img/nrg_booth2-2000.webp 2000w" sizes="(max-width:860px) 100vw, 600px" alt="3D render of a red NRG 106.5FM branded activation booth"></div>
+      <div class="exp-img"><img loading="lazy" width="1200" height="630" src="img/nrg_booth2.webp?v=2" srcset="img/nrg_booth2-640.webp?v=2 640w, img/nrg_booth2.webp?v=2 1200w, img/nrg_booth2-2000.webp?v=2 2000w" sizes="(max-width:860px) 100vw, 600px" alt="3D render of a red NRG 106.5FM branded activation booth"></div>
       <div>
         <p class="eyebrow">Signature service</p>
         <h2 id="exp-title" style="margin-top:14px">Experiential, end to end</h2>
@@ -710,7 +710,7 @@ img{image-rendering:auto}
   ];
   var grid=document.getElementById('grid'), reel=document.getElementById('reel');
   var DIMS={"toyota":[1200,635],"guinness":[1200,536],"vivo":[1200,641],"logos":[1200,407],"pulse_nation":[1200,1003],"fida":[1200,630],"smirnoff":[1200,653],"minute_maid":[1200,801],"mtn_pulse":[1200,737],"tusker_booth":[1200,591],"nrg_booth":[1200,630],"nrg_booth2":[1200,630],"bellazuri_1":[1200,675]};
-  function srcs(n){return 'src="img/'+n+'.webp" srcset="img/'+n+'-640.webp 640w, img/'+n+'.webp 1200w, img/'+n+'-2000.webp 2000w"'}
+  function srcs(n){return 'src="img/'+n+'.webp?v=2" srcset="img/'+n+'-640.webp?v=2 640w, img/'+n+'.webp?v=2 1200w, img/'+n+'-2000.webp?v=2 2000w"'}
   function dims(n){var d=DIMS[n]||[1200,800];return ' width="'+d[0]+'" height="'+d[1]+'"'}
   function card(w,i){
     var b=document.createElement('button'); b.className='card'; b.dataset.k=w.k; b.dataset.i=i;
@@ -736,7 +736,7 @@ img{image-rendering:auto}
   // dialog
   var d=document.getElementById('dlg');
   function openW(i){var w=W[i];
-    var di=document.getElementById('dlgImg');di.sizes='(max-width:760px) 100vw, 560px';di.srcset='img/'+w.img+'-640.webp 640w, img/'+w.img+'.webp 1200w, img/'+w.img+'-2000.webp 2000w';di.src='img/'+w.img+'.webp';document.getElementById('dlgImg').alt=w.t+': '+w.s;
+    var di=document.getElementById('dlgImg');di.sizes='(max-width:760px) 100vw, 560px';di.srcset='img/'+w.img+'-640.webp?v=2 640w, img/'+w.img+'.webp?v=2 1200w, img/'+w.img+'-2000.webp?v=2 2000w';di.src='img/'+w.img+'.webp?v=2';document.getElementById('dlgImg').alt=w.t+': '+w.s;
     document.getElementById('dlgTag').textContent=w.tag;document.getElementById('dlgTitle').textContent=w.t;
     document.getElementById('dlgText').textContent=w.x;document.getElementById('dlgMade').textContent=w.made;document.getElementById('dlgRole').textContent=w.role;
     document.getElementById('dlgCredit').textContent=w.role.indexOf('partner')>-1?'Created by the Memora creative team in collaboration with a partner agency. Brand names and marks belong to their owners.':'';
