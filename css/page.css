@@ -101,4 +101,4 @@ footer img{height:40px;width:auto}
 html{-webkit-text-size-adjust:100%}
 section,[id]{scroll-margin-top:84px}
 a,button,summary{-webkit-tap-highlight-color:transparent;touch-action:manipulation}
-.top{transform:translateZ(0);background:var(--stage)}
+.top{background:var(--stage)}
