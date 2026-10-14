@@ -4,6 +4,12 @@ Live site: https://memoraconcepts.com
 Source: GitHub memoraconcepts/memora-website (branch main). Every push to main goes live on Netlify within about a minute.
 This folder on the Desktop is a copy of the live site files, refreshed after each change.
 
+## 14 Oct 2026 (afternoon)
+
+- Added X (https://x.com/memoraug) alongside LinkedIn, shown as round icons in the footer of every page, in the contact card on the homepage and contact page, and in the "Let's make it Memora-ble" band on the service pages.
+- X is listed in the search-engine data (structured data) next to LinkedIn.
+- The footer now leaves room at the bottom so the "Ask Mo" button never covers the icons.
+
 ## 14 Oct 2026
 
 **Menu and pages**

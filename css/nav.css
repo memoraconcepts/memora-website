@@ -50,3 +50,17 @@
   html:not(.js) .top .wrap{flex-wrap:wrap}
 }
 @media (max-width:360px){.top-cta{display:none}}
+
+/* Social icons (X, LinkedIn): footer, contact cards and contact bands */
+.social{display:flex;gap:10px;align-items:center}
+.social a{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;border:1px solid var(--line-d);color:var(--bone);text-decoration:none;transition:background .2s,color .2s,border-color .2s}
+.social a:hover,.social a:focus-visible{background:var(--gold);border-color:var(--gold);color:var(--stage)}
+.social svg{display:block}
+.social-card{margin-top:8px}
+.social-card a{border-color:var(--gold);color:var(--gold)}
+.social-paper a{border-color:var(--ink);color:var(--ink)}
+.social-paper a:hover,.social-paper a:focus-visible{background:var(--ink);border-color:var(--ink);color:var(--paper)}
+.contact-band dd .social{margin-top:2px}
+/* keep the footer clear of the floating "Ask Mo" button */
+footer{padding-bottom:calc(100px + env(safe-area-inset-bottom,0px))!important}
+footer .social{order:3}
