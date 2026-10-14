@@ -1,0 +1,27 @@
+/* Mo, the Memora chat assistant. Loaded on every page by /js/mo.js. */
+.mo-fab{position:fixed;left:max(16px,env(safe-area-inset-left,0px));bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:40;display:flex;align-items:center;gap:10px;background:var(--gold);color:var(--stage);border:none;border-radius:999px;padding:12px 18px 12px 12px;font:700 15px var(--body);cursor:pointer;box-shadow:0 10px 30px rgba(0,0,0,.35)}
+.mo-fab .dot{width:30px;height:30px;border-radius:50%;background:var(--stage);display:grid;place-items:center}
+.mo-fab .dot img{width:20px;height:20px;object-fit:contain}
+.mo{position:fixed;left:max(16px,env(safe-area-inset-left,0px));bottom:calc(84px + env(safe-area-inset-bottom,0px));z-index:41;width:min(390px,calc(100vw - 32px));height:min(600px,calc(100vh - 120px));background:var(--stage-2);color:var(--bone);border:1px solid var(--line-d);border-radius:16px;display:flex;flex-direction:column;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.5)}
+.mo-head{display:flex;align-items:center;gap:12px;padding:14px 16px;border-bottom:1px solid var(--line-d);background:var(--stage)}
+.mo-head b{font-family:var(--display);font-size:17px;display:block}
+.mo-head span{font-size:12px;color:var(--bone-2)}
+.mo-head .x{margin-left:auto;background:none;border:1px solid var(--line-d);color:var(--bone);border-radius:999px;padding:4px 12px;font:600 13px var(--body);cursor:pointer}
+.mo-log{flex:1;overflow-y:auto;padding:16px;display:flex;flex-direction:column;gap:10px}
+.msg{max-width:86%;padding:10px 14px;border-radius:14px;font-size:15px;line-height:1.5;white-space:pre-wrap;overflow-wrap:anywhere}
+.msg.bot{background:var(--stage);border:1px solid var(--line-d);align-self:flex-start;border-bottom-left-radius:4px}
+.msg.me{background:var(--gold);color:var(--stage);align-self:flex-end;border-bottom-right-radius:4px}
+.msg a{color:var(--gold)}
+.mo-chips{display:flex;flex-wrap:wrap;gap:8px;padding:0 16px 10px}
+.mo-chips button{background:transparent;border:1px solid var(--line-d);color:var(--bone);border-radius:999px;padding:7px 12px;font:500 13px var(--body);cursor:pointer}
+.mo-chips button:hover{border-color:var(--gold)}
+.mo-form{display:flex;gap:8px;padding:12px;border-top:1px solid var(--line-d);background:var(--stage)}
+.mo-form input{flex:1;min-width:0;background:var(--stage-2);color:var(--bone);border:1px solid var(--line-d);border-radius:999px;padding:11px 14px;font:15px var(--body);color-scheme:dark}
+.mo-form button{background:var(--gold);color:var(--stage);border:none;border-radius:999px;padding:0 16px;font:700 14px var(--body);cursor:pointer}
+.mo-foot{font-size:11px;color:var(--bone-2);padding:0 16px 10px}
+.mo-head img{width:30px;height:30px;object-fit:contain}
+.msg .acts{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.msg .acts a{display:inline-block;text-decoration:none;font-weight:700;font-size:14px;padding:8px 14px;border-radius:999px;border:1.5px solid var(--gold);color:var(--bone)}
+.msg .acts a.wa{background:var(--gold);color:var(--stage)}
+.msg.me .acts a{color:var(--stage)}
+@media (max-width:600px){.mo-fab{padding:10px 14px 10px 10px;font-size:14px}}

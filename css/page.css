@@ -163,3 +163,12 @@ a,button,summary{-webkit-tap-highlight-color:transparent;touch-action:manipulati
 .steps-paper li{background:var(--paper-2);border-color:var(--line-l)}
 .steps-paper .n{color:var(--gold-deep)!important}
 .steps-paper span:not(.n){color:var(--ink-2)}
+
+/* ---- contact form: email or WhatsApp ---- */
+.enq-2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+@media (max-width:600px){.enq-2{grid-template-columns:minmax(0,1fr)}}
+.send-row{display:flex;flex-wrap:wrap;gap:12px}
+.send-row button{cursor:pointer;font:inherit;font-weight:700}
+.send-row button:disabled{opacity:.7;cursor:default}
+.sent{background:var(--paper-2);border-left:3px solid var(--teal);border-radius:8px;padding:14px 16px;color:var(--ink)}
+.sent a{color:var(--gold-deep);font-weight:700}

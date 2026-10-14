@@ -22,10 +22,11 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&family=DM+Mono:wght@400;500&display=swap">
-<link rel="stylesheet" href="/css/page.css?v=5">
+<link rel="stylesheet" href="/css/page.css?v=6">
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "ContactPage", "url": "https://memoraconcepts.com/contact/", "name": "Contact Memora", "mainEntity": {"@type": "ProfessionalService", "@id": "https://memoraconcepts.com/#org", "name": "Memora Concepts Ltd", "url": "https://memoraconcepts.com/", "telephone": "+256784215671", "email": "info@memoraconcepts.com", "address": {"@type": "PostalAddress", "addressLocality": "Namugongo, Kampala", "addressCountry": "UG"}, "openingHoursSpecification": [{"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], "opens": "08:30", "closes": "18:00"}, {"@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "09:00", "closes": "13:00"}], "contactPoint": [{"@type": "ContactPoint", "telephone": "+256784215671", "contactType": "customer service", "areaServed": "UG"}, {"@type": "ContactPoint", "telephone": "+256751500952", "contactType": "sales", "areaServed": "UG"}], "sameAs": ["https://www.linkedin.com/company/memora-concepts-ltd/"]}}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://memoraconcepts.com/"}, {"@type": "ListItem", "position": 2, "name": "Contact", "item": "https://memoraconcepts.com/contact/"}]}</script>
 <link rel="stylesheet" href="/css/nav.css?v=1">
+<link rel="stylesheet" href="/css/mo.css?v=1">
 </head>
 <body>
 <header class="top"><div class="wrap">
@@ -63,17 +64,28 @@
   </section>
   <section class="paper">
     <div class="wrap contact-grid">
-      <form id="enq" class="enq" novalidate>
+      <form id="enq" class="enq" name="enquiry" method="POST" action="/contact/" data-netlify="true" netlify-honeypot="bot-field" novalidate>
+        <input type="hidden" name="form-name" value="enquiry">
+        <input type="hidden" name="subject" value="New enquiry from memoraconcepts.com">
+        <input type="hidden" name="channel" value="Email">
+        <p hidden><label>Leave this empty<input name="bot-field"></label></p>
         <h2>Send us a quick brief</h2>
-        <p class="lede">This prepares a WhatsApp message you can send us in one tap.</p>
-        <label for="f-name">Your name<input id="f-name" required autocomplete="name"></label>
-        <label for="f-co">Company<input id="f-co" autocomplete="organization"></label>
+        <p class="lede">Send it by email or on WhatsApp. Either way it reaches the team straight away, and we reply within two working hours.</p>
+        <label for="f-name">Your name<input id="f-name" name="name" required autocomplete="name"></label>
+        <label for="f-co">Company<input id="f-co" name="company" autocomplete="organization"></label>
+        <div class="enq-2">
+          <label for="f-phone">Phone or WhatsApp<input id="f-phone" name="phone" type="tel" autocomplete="tel" placeholder="+256…"></label>
+          <label for="f-email">Email<input id="f-email" name="email" type="email" autocomplete="email" placeholder="you@company.com"></label>
+        </div>
         <label for="f-need">What do you need?
-          <select id="f-need"><option>An activation or event</option><option>A brand identity or refresh</option><option>Monthly content (a plan)</option><option>Short video / TikTok</option><option>A company profile or pitch deck</option><option>Agency design support</option><option>Something else</option></select></label>
-        <label for="f-msg">Tell us about it<textarea id="f-msg" rows="4" placeholder="What are you launching, where, and for whom?"></textarea></label>
-        <p class="err" id="f-err" hidden>Please add your name so we know who we're talking to.</p>
-        <button class="btn btn-gold" type="submit">Prepare my WhatsApp message</button>
-        <div id="f-out" hidden><p>Your message is ready.</p><a class="btn btn-gold" id="f-wa" href="https://wa.me/256784215671" target="_blank" rel="noopener">Open in WhatsApp</a></div>
+          <select id="f-need" name="need"><option>An activation or event</option><option>A brand identity or refresh</option><option>Monthly content (a plan)</option><option>Short video / TikTok</option><option>A company profile or pitch deck</option><option>Agency design support</option><option>AFCON 2027 kit</option><option>Something else</option></select></label>
+        <label for="f-msg">Tell us about it<textarea id="f-msg" name="message" rows="4" placeholder="What are you launching, where, and for whom?"></textarea></label>
+        <p class="err" id="f-err" hidden></p>
+        <div class="send-row">
+          <button class="btn btn-gold" type="submit" id="f-send">Send by email</button>
+          <button class="btn btn-ghost" type="button" id="f-wa">Send on WhatsApp</button>
+        </div>
+        <div id="f-out" class="sent" hidden role="status"></div>
       </form>
       <aside class="contact-card" aria-label="Contact details">
         <div><p class="k">Call / WhatsApp</p><p class="v"><a href="tel:+256784215671">+256 784 215 671</a></p><p class="v"><a href="tel:+256751500952">+256 751 500 952</a></p></div>
@@ -93,17 +105,44 @@
       </div>
       <div class="offer" role="note">
         <p><b>Founding offer for our first 10 clients:</b> 50% off your first month on any monthly plan, and your price locked for life. Brand teams also get a free activation idea and 3D render.</p>
-        <a class="btn btn-gold" href="/contact/">Claim a founding spot</a>
+        <a class="btn btn-gold" href="/founding-offer/">See the founding offer</a>
       </div>
     </div>
   </section>
 </main>
 <script>
-(function(){var f=document.getElementById('enq');f.addEventListener('submit',function(e){e.preventDefault();
-var n=document.getElementById('f-name').value.trim();var err=document.getElementById('f-err');if(!n){err.hidden=false;return}err.hidden=true;
-var co=document.getElementById('f-co').value.trim(),need=document.getElementById('f-need').value,m=document.getElementById('f-msg').value.trim();
-var t='Hello Memora, I am '+n+(co?' from '+co:'')+'. I need: '+need+'.'+(m?' '+m:'');
-document.getElementById('f-wa').href='https://wa.me/256784215671?text='+encodeURIComponent(t);var o=document.getElementById('f-out');o.hidden=false;o.scrollIntoView({block:'nearest'})})})();
+(function(){
+  var f=document.getElementById('enq'),err=document.getElementById('f-err'),out=document.getElementById('f-out'),send=document.getElementById('f-send');
+  function v(id){return document.getElementById(id).value.trim()}
+  function check(needEmail){
+    var n=v('f-name'),p=v('f-phone'),e=v('f-email');
+    if(!n){return 'Please add your name so we know who we\'re talking to.'}
+    if(needEmail&&!e&&!p){return 'Please add an email or phone number so we can reply.'}
+    if(e&&!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(e)){return 'That email address doesn\'t look right. Please check it.'}
+    return ''}
+  function text(){var co=v('f-co'),m=v('f-msg'),p=v('f-phone'),e=v('f-email');
+    return 'Hello Memora, I\'m '+v('f-name')+(co?' from '+co:'')+'.\nI need: '+v('f-need')+(m?'\n'+m:'')+((p||e)?'\nReach me on: '+[p,e].filter(Boolean).join(' / '):'')}
+  function post(channel){var d=new FormData(f);d.set('channel',channel);
+    return fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:new URLSearchParams(d).toString()}).then(function(r){if(!r.ok)throw new Error(r.status)})}
+  function show(html){out.innerHTML=html;out.hidden=false;out.scrollIntoView({block:'nearest',behavior:'smooth'})}
+  f.addEventListener('submit',function(e){e.preventDefault();
+    var m=check(true);err.textContent=m;err.hidden=!m;if(m)return;
+    send.disabled=true;send.textContent='Sending…';
+    post('Email').then(function(){
+      show('<p><b>Thanks, '+v('f-name').split(' ')[0].replace(/[<>&]/g,'')+'. Your brief is in our inbox.</b> We\'ll reply within two working hours.</p>');
+      f.reset();send.textContent='Sent';
+    }).catch(function(){
+      send.disabled=false;send.textContent='Send by email';
+      show('<p>Sorry, that didn\'t go through. Please email us at <a href="mailto:info@memoraconcepts.com?subject=Website%20enquiry&body='+encodeURIComponent(text())+'">info@memoraconcepts.com</a> or use WhatsApp.</p>');
+    });
+  });
+  document.getElementById('f-wa').addEventListener('click',function(){
+    var m=check(false);err.textContent=m;err.hidden=!m;if(m)return;
+    window.open('https://wa.me/256784215671?text='+encodeURIComponent(text()),'_blank','noopener');
+    post('WhatsApp').catch(function(){}); // keep a copy of WhatsApp enquiries in the inbox too
+    show('<p><b>WhatsApp is opening with your message.</b> Just tap send. If it didn\'t open, <a href="https://wa.me/256784215671?text='+encodeURIComponent(text())+'" target="_blank" rel="noopener">tap here</a>.</p>');
+  });
+})();
 </script>
 <footer><div class="wrap">
   <a href="/"><img src="/img/logo_colour.png" alt="Memora Concepts Ltd" width="884" height="315"></a>
@@ -111,5 +150,6 @@ document.getElementById('f-wa').href='https://wa.me/256784215671?text='+encodeUR
   <span>Memora Concepts Ltd · Namugongo, Kampala, Uganda · +256 784 215 671 · info@memoraconcepts.com</span>
 </div></footer>
 <script src="/js/nav.js?v=1" defer></script>
+<script src="/js/mo.js?v=1" defer></script>
 </body>
 </html>
