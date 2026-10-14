@@ -33,24 +33,6 @@ section{padding-block:clamp(56px,8vw,104px)}
 .btn-ghost{background:transparent;color:var(--bone)}
 .paper .btn-ghost{color:var(--ink);border-color:var(--ink)}
 
-.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:rgba(18,16,13,.94);border-bottom:1px solid var(--line-d)}
-.top::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:3px;background:linear-gradient(90deg,var(--red) 0 33.3%,var(--gold) 33.3% 66.6%,var(--teal) 66.6% 100%)}
-.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;padding-block:14px}
-.top img{height:38px;width:auto}
-.top nav{display:flex;gap:22px;align-items:center;flex-wrap:wrap}
-.top nav a{text-decoration:none;font-size:15px;color:var(--bone-2)}
-.top nav a:hover,.top nav a[aria-current]{color:var(--bone)}
-.top nav .btn{padding:9px 16px;font-size:14px;color:var(--stage)}
-.top .mob-cta{display:none;padding:9px 16px;font-size:14px;color:var(--stage)}
-@media (max-width:720px){
-  .top .wrap{flex-wrap:wrap;row-gap:10px}
-  .top nav{order:3;width:100%;flex-wrap:nowrap;overflow-x:auto;gap:18px;padding-bottom:4px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
-  .top nav::-webkit-scrollbar{display:none}
-  .top nav a{white-space:nowrap;font-size:15px}
-  .top nav .btn{display:none}
-  .top .mob-cta{display:inline-flex}
-}
-
 .crumbs{font-size:14px;color:var(--bone-2);display:flex;gap:8px;flex-wrap:wrap;margin-bottom:22px}
 .crumbs a{text-decoration:none}
 .crumbs a:hover{color:var(--bone)}
@@ -109,7 +91,6 @@ footer img{height:40px;width:auto}
 html{-webkit-text-size-adjust:100%}
 section,[id]{scroll-margin-top:84px}
 a,button,summary{-webkit-tap-highlight-color:transparent;touch-action:manipulation}
-.top{background:var(--stage)}
 
 /* ---- Phase 1 pages: work, pricing, about, contact ---- */
 .hero-plain .hero-copy{max-width:900px}
@@ -177,3 +158,8 @@ a,button,summary{-webkit-tap-highlight-color:transparent;touch-action:manipulati
 .contact-card .v a{text-decoration:none}
 .contact-card .v a:hover{color:var(--gold)}
 .contact-card .s{font-size:14px;color:var(--bone-2);margin-top:4px}
+
+/* ---- steps on cream sections (founding offer) ---- */
+.steps-paper li{background:var(--paper-2);border-color:var(--line-l)}
+.steps-paper .n{color:var(--gold-deep)!important}
+.steps-paper span:not(.n){color:var(--ink-2)}

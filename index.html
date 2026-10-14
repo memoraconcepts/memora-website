@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
+<script>document.documentElement.classList.add('js')</script>
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Memora Concepts | Branding, Activation &amp; Event Agency in Kampala, Uganda</title>
 <meta name="description" content="Memora Concepts is a branding and experiential agency in Namugongo, Kampala, Uganda: logo and brand identity design, brand activations, event branding, booths and TikTok-first content.">
@@ -55,7 +56,7 @@
 html{-webkit-text-size-adjust:100%}
 @media (hover:hover) and (pointer:fine){html{scroll-behavior:smooth}}
 section,[id]{scroll-margin-top:84px}
-a,button,summary,.chip{-webkit-tap-highlight-color:transparent;touch-action:manipulation}
+a,button,summary{-webkit-tap-highlight-color:transparent;touch-action:manipulation}
 @media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
 body{margin:0;background:var(--stage);color:var(--bone);font-family:var(--body);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
 img{max-width:100%;display:block}
@@ -78,24 +79,6 @@ section{padding-block:clamp(72px,10vw,128px)}
 .btn-gold:hover{background:#FFB233}
 .btn-ghost{background:transparent;color:var(--bone)}
 .btn-ghost:hover{background:var(--stage-2)}
-
-/* header */
-.top::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:3px;background:linear-gradient(90deg,var(--red) 0 33.3%,var(--gold) 33.3% 66.6%,var(--teal) 66.6% 100%)}
-.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--stage);border-bottom:1px solid var(--line-d)}
-.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:24px;padding-block:14px}
-.brand img{height:40px;width:auto}
-.nav{display:flex;align-items:center;gap:28px}
-.nav a{text-decoration:none;font-size:15px;color:var(--bone-2)}
-.nav a:hover{color:var(--bone)}
-.nav .btn{padding:10px 18px;font-size:14px;color:var(--stage)}
-.nav .btn:hover{color:var(--stage)}
-.menu-btn{display:none;background:none;border:1px solid var(--line-d);color:var(--bone);border-radius:999px;padding:8px 14px;font:600 14px var(--body);cursor:pointer}
-@media (max-width:900px){
-  .menu-btn{display:inline-block}
-  .nav{display:none;position:absolute;left:0;right:0;top:100%;background:var(--stage);flex-direction:column;align-items:flex-start;gap:18px;padding:20px var(--gut) 28px;border-bottom:1px solid var(--line-d)}
-  .nav.open{display:flex;box-shadow:0 18px 40px rgba(0,0,0,.45)}
-  .nav a{padding-block:4px;font-size:17px}
-}
 
 /* hero */
 .hero{padding-block:clamp(56px,8vw,104px) 0;position:relative;overflow:hidden}
@@ -137,9 +120,6 @@ section{padding-block:clamp(72px,10vw,128px)}
 @media (max-width:760px){.about-cols{grid-template-columns:1fr;gap:20px}}
 
 /* work */
-.filters{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:32px}
-.chip{font:500 14px var(--body);color:var(--bone-2);background:transparent;border:1px solid var(--line-d);border-radius:999px;padding:9px 16px;cursor:pointer}
-.chip[aria-pressed="true"]{background:var(--bone);color:var(--stage);border-color:var(--bone)}
 .grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
 @media (max-width:980px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media (max-width:600px){.grid{grid-template-columns:1fr}}
@@ -294,21 +274,6 @@ footer img{height:44px;width:auto}
 .mo-form input{flex:1;min-width:0;background:var(--stage-2);color:var(--bone);border:1px solid var(--line-d);border-radius:999px;padding:11px 14px;font:15px var(--body);color-scheme:dark}
 .mo-form button{background:var(--gold);color:var(--stage);border:none;border-radius:999px;padding:0 16px;font:700 14px var(--body);cursor:pointer}
 .mo-foot{font-size:11px;color:var(--bone-2);padding:0 16px 10px}
-/* owner insights */
-.ins-btn{position:fixed;left:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:40;background:var(--stage-2);color:var(--bone);border:1px solid var(--gold);border-radius:999px;padding:10px 16px;font:600 14px var(--body);cursor:pointer}
-#ins{width:min(1000px,calc(100vw - 32px))}
-.ins-body{padding:28px;display:flex;flex-direction:column;gap:20px;overflow:auto;max-height:calc(100vh - 80px)}
-.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px}
-.kpis div{background:var(--stage);border:1px solid var(--line-d);border-radius:10px;padding:14px}
-.kpis b{display:block;font-family:var(--display);font-size:30px;color:var(--gold);font-variant-numeric:tabular-nums}
-.kpis span{font-size:13px;color:var(--bone-2)}
-.tbl{overflow-x:auto;border:1px solid var(--line-d);border-radius:10px}
-.tbl table{border-collapse:collapse;width:100%;font-size:14px;min-width:640px}
-.tbl th,.tbl td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--line-d);vertical-align:top}
-.tbl th{font-family:var(--mono);font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--gold)}
-.tbl td{color:var(--bone)}
-.empty{color:var(--bone-2);font-size:15px}
-
 .hero-h1{display:flex;flex-direction:column;gap:18px}
 .hero-h1 .eyebrow{font-weight:400;line-height:1.4}
 .pillar .more{margin-top:6px;font-weight:700;font-size:15px;color:var(--gold-deep);text-decoration:none}
@@ -339,26 +304,52 @@ footer img{height:44px;width:auto}
 img{image-rendering:auto}
 .see-all{margin-top:28px}
 .offer .btn-ghost{margin-left:8px}
+
+/* services: one card per service page */
+.svc{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+@media (max-width:1060px){.svc{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:600px){.svc{grid-template-columns:1fr}}
+.svc a{display:flex;flex-direction:column;gap:12px;text-decoration:none;background:var(--paper-2);border-radius:12px;padding:26px;border-top:4px solid var(--gold);min-width:0;transition:transform .2s,box-shadow .2s}
+.svc a:nth-child(1){border-top-color:var(--red)}.svc a:nth-child(3){border-top-color:var(--teal)}.svc a:nth-child(4){border-top-color:var(--ink)}
+.svc a:hover{transform:translateY(-3px);box-shadow:0 14px 30px rgba(20,18,15,.12)}
+.svc .who{font-family:var(--mono);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--gold-deep)}
+.svc p{color:var(--ink-2);font-size:16px}
+.svc .go{margin-top:auto;padding-top:8px;font-weight:700;font-size:15px;color:var(--gold-deep)}
+.exp-more{margin-top:24px}
+a.way{text-decoration:none;color:inherit;transition:border-color .2s}
+a.way:hover{border-color:var(--gold)}
+.way .go{font-weight:700;font-size:15px;color:var(--gold)}
+.cta-band{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:clamp(28px,5vw,72px);align-items:end}
+@media (max-width:900px){.cta-band{grid-template-columns:1fr}}
+.cta-band .sec-head{margin-bottom:0}
+.cta-band .contact-card .v{user-select:text}
 </style>
+<link rel="stylesheet" href="/css/nav.css?v=1">
 </head>
 <body>
 
 
-<header class="top">
-  <div class="wrap">
-    <a class="brand" href="#top" aria-label="Memora home"><img src="img/logo_colour.png" alt="Memora Concepts Ltd"></a>
-    <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="nav">Menu</button>
-    <nav class="nav" id="nav" aria-label="Main">
-      <a href="#work">Work</a>
-      <a href="#services">Services</a>
-      <a href="#experiential">Experiential</a>
-      <a href="/pricing/">Pricing</a>
-      <a href="/about/">About</a>
-      <a href="/contact/">Contact</a>
-      <a class="btn btn-gold" href="#contact">Start a project</a>
-    </nav>
-  </div>
-</header>
+<header class="top"><div class="wrap">
+  <a class="brand" href="/" aria-label="Memora home"><img src="/img/logo_colour.png" alt="Memora Concepts Ltd" width="884" height="315"></a>
+  <nav class="site-nav" id="site-nav" aria-label="Main">
+    <a href="/work/">Work</a>
+    <div class="dd">
+      <button class="dd-btn" type="button" aria-expanded="false" aria-controls="dd-services">Services</button>
+      <div class="dd-menu" id="dd-services">
+        <a href="/activations/"><b>Activations &amp; events</b><span>Booths, launches, expos and on-site set-up</span></a>
+        <a href="/branding/"><b>Brand identity &amp; logos</b><span>Logos, brand kits and company profiles</span></a>
+        <a href="/content/"><b>Social &amp; TikTok content</b><span>Short video, key visuals and monthly content</span></a>
+        <a href="/agency-design-desk/"><b>Agency design desk</b><span>Design support under your agency&#x27;s name</span></a>
+      </div>
+    </div>
+    <a href="/pricing/">Pricing</a>
+    <a href="/founding-offer/">Founding offer</a>
+    <a href="/about/">About</a>
+    <a href="/contact/">Contact</a>
+  </nav>
+  <a class="btn btn-gold top-cta" href="/contact/">Start a project</a>
+  <button class="menu-btn" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+</div></header>
 
 <main id="top">
   <section class="hero" aria-labelledby="hero-title">
@@ -369,7 +360,7 @@ img{image-rendering:auto}
         <p>We design brand identities, campaigns and live brand moments that people carry home in their memory. From the logo to the launch night.</p>
         <div class="hero-cta">
           <a class="btn btn-gold" href="#work">See the work</a>
-          <a class="btn btn-ghost" href="#contact">Get a free brand check</a>
+          <a class="btn btn-ghost" href="/contact/">Get a free brand check</a>
         </div>
       </div>
     </div>
@@ -401,14 +392,7 @@ img{image-rendering:auto}
       <div class="sec-head">
         <p class="eyebrow">Selected work by our team</p>
         <h2 id="work-title">Spaces, stories and launches</h2>
-        <p class="lede">Activations people step into, key visuals with energy, and decks that sell the idea. Tap any project for the detail.</p>
-      </div>
-      <div class="filters" role="group" aria-label="Filter work">
-        <button class="chip" aria-pressed="true" data-f="all">All</button>
-        <button class="chip" aria-pressed="false" data-f="activation">Activations</button>
-        <button class="chip" aria-pressed="false" data-f="campaign">Campaigns</button>
-        <button class="chip" aria-pressed="false" data-f="launch">Launches</button>
-        <button class="chip" aria-pressed="false" data-f="brand">Brand &amp; decks</button>
+        <p class="lede">Activations people step into, key visuals with energy, and decks that sell the idea. A few highlights here, with the full project details on the Work page.</p>
       </div>
       <div class="grid" id="grid"></div>
       <p class="see-all"><a class="btn btn-ghost" href="/work/">See all work with project details →</a></p>
@@ -439,53 +423,11 @@ img{image-rendering:auto}
         <p class="eyebrow">What we do</p>
         <h2 id="svc-title">One studio, from the logo to the live moment</h2>
       </div>
-      <div class="pillars">
-        <div class="pillar">
-          <h3>Activation &amp; Experiential</h3>
-          <ul>
-            <li>Activation concepts and guest journeys</li>
-            <li>3D booth, stand and stage design</li>
-            <li>Backdrops, photo booths and entrance arches</li>
-            <li>Roadshows, sampling and product launches</li>
-            <li>Production management and on-site set-up</li>
-            <li>Event content capture and recap reports</li>
-          </ul><a class="more" href="/activations/">Activations &amp; event branding →</a>
-        </div>
-        <div class="pillar">
-          <h3>Brand Identity &amp; Strategy</h3>
-          <ul>
-            <li>Brand strategy and positioning</li>
-            <li>Logos and full brand kits</li>
-            <li>Brand guidelines and packaging</li>
-            <li>Company profiles and capability statements</li>
-            <li>Annual reports, brochures and catalogues</li>
-            <li>Signage and stationery</li>
-          </ul><a class="more" href="/branding/">Brand identity &amp; logo design →</a>
-        </div>
-        <div class="pillar">
-          <h3>Content &amp; Digital</h3>
-          <ul>
-            <li>Campaign key visuals</li>
-            <li>TikTok-first short video and social content</li>
-            <li>Motion graphics and 2D/3D renders</li>
-            <li>Billboards and posters</li>
-            <li>Pitch decks and presentations</li>
-            <li>Websites and UI design</li>
-          </ul><a class="more" href="/content/">Social media &amp; TikTok content →</a>
-        </div>
-      </div>
-      <div class="new">
-        <div class="new-head">
-          <h3>New for 2026–27</h3>
-          <p class="eyebrow">Built for what the market is buying</p>
-        </div>
-        <div class="new-grid">
-          <div><b>Short-video studio</b><span>Vertical video, creator-style ads and TikTok content calendars.</span></div>
-          <div><b>Creator management</b><span>Shortlist, brief, contract and track the right creators.</span></div>
-          <div><b>AFCON 2027 kit</b><span>Fan zones, viewing-party packs and match-day content for June–July 2027.</span></div>
-          <div><b>Energy comms pack</b><span>Tender-ready profiles, HSE campaigns, signage and community events.</span></div>
-          <div><b>Conference &amp; expo</b><span>Event identity, stage, stands, delegate kits and sponsor decks.</span></div>
-        </div>
+      <div class="svc">
+        <a href="/activations/"><span class="who">Signature service</span><h3>Activations &amp; events</h3><p>Activation concepts, 3D booth and stage design, launches, expos and on-site set-up.</p><span class="go">Activations &amp; events →</span></a>
+        <a href="/branding/"><span class="who">Brand identity</span><h3>Brand identity &amp; logos</h3><p>Brand strategy, logos, full brand kits, guidelines, packaging and company profiles.</p><span class="go">Brand identity &amp; logos →</span></a>
+        <a href="/content/"><span class="who">Content &amp; digital</span><h3>Social &amp; TikTok content</h3><p>TikTok-first short video, key visuals, motion graphics, billboards and pitch decks.</p><span class="go">Social &amp; TikTok content →</span></a>
+        <a href="/agency-design-desk/"><span class="who">For agencies</span><h3>Agency design desk</h3><p>Key visuals, adaptations, 3D renders and decks under your agency&#x27;s name, with an NDA as standard.</p><span class="go">Agency design desk →</span></a>
       </div>
     </div>
   </section>
@@ -504,25 +446,7 @@ img{image-rendering:auto}
           <li><span class="n">5</span><div><b>Recap</b><span>Photos, reach and a report your team can take upstairs.</span></div></li>
         </ol>
         <p class="build-for">We build for product launches, festival and concert activations, trade expos, corporate conferences, roadshows and campus activations.</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="approach" class="paper" aria-labelledby="ap-title">
-    <div class="wrap">
-      <div class="sec-head">
-        <p class="eyebrow">How we work</p>
-        <h2 id="ap-title">Start with the why, then craft the wow</h2>
-      </div>
-      <div class="phases">
-        <div class="phase"><span class="k">PHASE 1</span><h3>Discover</h3><p>Kickoff, brand questionnaire and audience research, ending in a clear creative brief.</p></div>
-        <div class="phase"><span class="k">PHASE 2</span><h3>Create</h3><p>Concepts, mockups and 3D renders, refined with you until they are right.</p></div>
-        <div class="phase"><span class="k">PHASE 3</span><h3>Launch</h3><p>Rollout, on-site set-up and a recap of what worked, with next ideas.</p></div>
-      </div>
-      <div class="promises">
-        <div><b>2 hours</b><span>WhatsApp reply, every working day</span></div>
-        <div><b>48 hours</b><span>First draft on plan work</span></div>
-        <div><b>1 named designer</b><span>Who knows your brand</span></div>
+        <p class="exp-more"><a class="btn btn-ghost" href="/activations/">How we run activations →</a></p>
       </div>
     </div>
   </section>
@@ -534,11 +458,11 @@ img{image-rendering:auto}
         <h2 id="ways-title">Pick the model that fits</h2>
       </div>
       <div class="ways">
-        <div class="way"><span class="who">For brand teams</span><h3>Activation projects</h3><p>Event and experiential packages, full builds quoted per brief, or an annual framework contract.</p><span class="price">Packages from UGX 800K</span></div>
-        <div class="way"><span class="who">For BTL &amp; PR agencies</span><h3>Agency design desk</h3><p>Key visuals, adaptations, 3D renders and decks under your agency's name, with a fixed rate card and an NDA as standard.</p><span class="price">Rate card on request</span></div>
-        <div class="way"><span class="who">For SMEs, NGOs &amp; schools</span><h3>Monthly plans</h3><p>A creative team on subscription. Starter, Growth and Partner plans. Pause or cancel anytime.</p><span class="price">From UGX 600K / month</span></div>
+        <a class="way" href="/activations/"><span class="who">For brand teams</span><h3>Activation projects</h3><p>Event and experiential packages, full builds quoted per brief, or an annual framework contract.</p><span class="price">Packages from UGX 800K</span><span class="go">Activations &amp; events →</span></a>
+        <a class="way" href="/agency-design-desk/"><span class="who">For BTL &amp; PR agencies</span><h3>Agency design desk</h3><p>Key visuals, adaptations, 3D renders and decks under your agency's name, with a fixed rate card and an NDA as standard.</p><span class="price">Rate card on request</span><span class="go">Agency design desk →</span></a>
+        <a class="way" href="/pricing/"><span class="who">For SMEs, NGOs &amp; schools</span><h3>Monthly plans</h3><p>A creative team on subscription. Starter, Growth and Partner plans. Pause or cancel anytime.</p><span class="price">From UGX 600K / month</span><span class="go">See plans and prices →</span></a>
       </div>
-      <div class="offer" role="note"><p class="eyebrow">Founding offer · first 10 clients</p><p class="offer-t"><b>50% off your first month</b> on any monthly plan, and your price <b>locked for life</b>. Brand teams also get a free activation idea and 3D render.</p><a class="btn btn-gold" href="#contact">Claim a founding spot</a><a class="btn btn-ghost" href="/pricing/">See full prices</a></div>
+      <div class="offer" role="note"><p class="eyebrow">Founding offer · first 10 clients</p><p class="offer-t"><b>50% off your first month</b> on any monthly plan, and your price <b>locked for life</b>. Brand teams also get a free activation idea and 3D render.</p><a class="btn btn-gold" href="/founding-offer/">See the founding offer</a><a class="btn btn-ghost" href="/pricing/">See full prices</a></div>
       <div class="sectors" aria-label="Sectors we serve">
         <span>Beverage &amp; FMCG</span><span>Telecom &amp; banking</span><span>BTL, event &amp; PR agencies</span><span>Oil, gas &amp; energy</span><span>Construction &amp; solar</span><span>Conferences &amp; expos</span><span>Hospitality &amp; real estate</span><span>Schools &amp; universities</span><span>NGOs</span>
       </div>
@@ -575,75 +499,20 @@ img{image-rendering:auto}
     </div>
   </section>
 
-  <section id="studio" aria-labelledby="studio-title">
-    <div class="wrap">
-      <div class="sec-head">
-        <p class="eyebrow">The studio</p>
-        <h2 id="studio-title">Founders on your WhatsApp, not a chain of managers</h2>
-      </div>
-      <div class="team">
-        <div class="person"><h3>Ben Mutaama</h3><span class="role">Co-founder</span><p>Leads Memora's creative work, from brand identities to activation design.</p></div>
-        <div class="person"><h3>Lennart Owora</h3><span class="role">Co-founder</span><p>Leads client partnerships, projects and the business side of Memora.</p></div>
-        <div class="person"><h3>The creative team</h3><span class="role">Design · 3D · motion</span><p>Backed by vetted print, fabrication, photo and video partners across Kampala.</p></div>
-      </div>
-      <p class="quote">"Our promise is to never deliver the expected. We exist to etch your brand into the memory of your industry."<span>— Ben &amp; Len</span></p>
-      <p class="see-all"><a class="btn btn-ghost" href="/about/">More about Memora →</a></p>
-    </div>
-  </section>
-
   <section id="contact" class="paper" aria-labelledby="contact-title">
-    <div class="wrap">
+    <div class="wrap cta-band">
       <div class="sec-head">
         <p class="eyebrow">Start a project</p>
         <h2 id="contact-title">Let's make it Memora&#8209;ble</h2>
-        <p class="lede">Ask for a free brand check, or a free activation idea and 3D render for your next event. Tell us a little and we'll reply within two working hours.</p>
+        <p class="lede">Ask for a free brand check, or a free activation idea and 3D render for your next event. We reply within two working hours.</p>
+        <div class="hero-cta"><a class="btn btn-gold" href="https://wa.me/256784215671?text=Hello Memora, I found you on your website.">WhatsApp us</a><a class="btn btn-ghost" href="/contact/">Send a quick brief</a></div>
       </div>
-      <div class="contact-grid">
-        <form id="enq" novalidate>
-          <label>Your name<input id="f-name" required autocomplete="name"></label>
-          <label>Company<input id="f-co" autocomplete="organization"></label>
-          <label>Phone or email<input id="f-contact" required></label>
-          <label>What do you need?
-            <select id="f-need">
-              <option>An activation or event</option>
-              <option>A brand identity or refresh</option>
-              <option>Monthly content (a plan)</option>
-              <option>Short video / TikTok</option>
-              <option>A company profile or pitch deck</option>
-              <option>Agency design support</option>
-              <option>Something else</option>
-            </select>
-          </label>
-          <label class="full">Timing
-            <select id="f-when">
-              <option>This month (founding offer)</option>
-              <option>In 1–3 months</option>
-              <option>Later this year</option>
-              <option>For AFCON 2027</option>
-            </select>
-          </label>
-          <label class="full">Tell us about it<textarea id="f-msg" placeholder="What are you launching, where, and for whom?"></textarea></label>
-          <div class="form-actions full">
-            <button class="btn btn-gold" type="submit">Prepare my message</button>
-            <span id="f-err" style="color:#9A2B1E;font-size:14px" hidden>Please add your name and a phone number or email.</span>
-          </div>
-          <div class="result" id="result" hidden>
-            <p style="font-weight:700">Your message is ready. Send it to us on WhatsApp or by email.</p>
-            <pre id="msgOut"></pre>
-            <div class="form-actions">
-              <a class="btn btn-gold" id="waLink" href="#" target="_blank" rel="noopener">Open in WhatsApp</a>
-              <button class="btn btn-ghost" type="button" id="copyMsg">Copy message</button>
-            </div>
-          </div>
-        </form>
-        <aside class="contact-card" aria-label="Contact details">
-          <div><p class="k">Studio</p><p class="v">Namugongo, Kampala, Uganda</p><p class="s">Full address coming soon</p></div>
-          <div><p class="k">Call / WhatsApp</p><p class="v">+256 784 215 671<button class="copy" data-copy="+256784215671">Copy</button></p><p class="v">+256 751 500 952<button class="copy" data-copy="+256751500952">Copy</button></p></div>
-          <div><p class="k">Email</p><p class="v">info@memoraconcepts.com<button class="copy" data-copy="info@memoraconcepts.com">Copy</button></p></div>
-          <div><p class="k">Follow us</p><a class="li-btn" href="https://www.linkedin.com/company/memora-concepts-ltd/" target="_blank" rel="noopener"><svg class="li-ic" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><rect width="24" height="24" rx="4" fill="currentColor"/><text x="12" y="17.5" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-weight="700" font-size="13" fill="var(--li-bg,#14120F)">in</text></svg>Memora Concepts on LinkedIn</a></div>
-          <div><p class="k">Hours</p><p class="v">Mon–Fri 8:30–18:00 · Sat 9:00–13:00</p></div>
-        </aside>
-      </div>
+      <aside class="contact-card" aria-label="Contact details">
+        <div><p class="k">Studio</p><p class="v">Namugongo, Kampala, Uganda</p><p class="s">Full address coming soon</p></div>
+        <div><p class="k">Call / WhatsApp</p><p class="v">+256 784 215 671</p><p class="v">+256 751 500 952</p></div>
+        <div><p class="k">Email</p><p class="v">info@memoraconcepts.com</p></div>
+        <div><p class="k">Hours</p><p class="v">Mon–Fri 8:30–18:00 · Sat 9:00–13:00</p></div>
+      </aside>
     </div>
   </section>
   <section id="faq" aria-labelledby="faq-title">
@@ -672,26 +541,11 @@ img{image-rendering:auto}
   </form>
   <p class="mo-foot">Mo is Memora's assistant. A person from the team follows up on every enquiry.</p>
 </div>
-<button class="ins-btn" id="insBtn" hidden>Site insights</button>
-<dialog id="ins" aria-labelledby="insTitle">
-  <div class="ins-body">
-    <div style="display:flex;justify-content:space-between;align-items:center;gap:12px">
-      <h3 id="insTitle" style="font-size:28px">Site insights</h3>
-      <div style="display:flex;gap:8px"><button class="close" id="insRefresh">Refresh</button><button class="close" id="insClose">Close</button></div>
-    </div>
-    <p class="empty" id="insNote">Only you can see this. Visits are logged for visitors signed in to Claude while the site runs here; the public version needs the hosted tracker.</p>
-    <div class="kpis" id="insKpis"></div>
-    <h3>Leads from Mo</h3>
-    <div class="tbl"><table><thead><tr><th>When</th><th>Name</th><th>Contact</th><th>Need</th><th>Notes</th></tr></thead><tbody id="insLeads"></tbody></table></div>
-    <h3>Visitors</h3>
-    <div class="tbl"><table><thead><tr><th>Last seen</th><th>Visits</th><th>Device</th><th>Came from</th><th>Sections viewed</th><th>Chats</th></tr></thead><tbody id="insVisits"></tbody></table></div>
-  </div>
-</dialog>
 
 <footer>
   <div class="wrap">
     <img src="img/logo_colour.png" alt="Memora Concepts Ltd">
-    <nav class="foot-nav" aria-label="Site"><a href="/branding/">Brand identity</a><a href="/activations/">Activations &amp; events</a><a href="/content/">Social &amp; TikTok content</a><a href="/work/">Work</a><a href="/pricing/">Pricing</a><a href="/about/">About</a><a href="/contact/">Contact</a><a href="#faq">FAQ</a><a href="https://www.linkedin.com/company/memora-concepts-ltd/" target="_blank" rel="noopener">LinkedIn</a></nav>
+    <nav class="foot-nav" aria-label="Site"><a href="/work/">Work</a><a href="/activations/">Activations &amp; events</a><a href="/branding/">Brand identity</a><a href="/content/">Social &amp; TikTok content</a><a href="/agency-design-desk/">Agency design desk</a><a href="/pricing/">Pricing</a><a href="/founding-offer/">Founding offer</a><a href="/about/">About</a><a href="/contact/">Contact</a><a href="/#faq">FAQ</a><a href="https://www.linkedin.com/company/memora-concepts-ltd/" target="_blank" rel="noopener">LinkedIn</a></nav>
     <span>Memora Concepts Ltd · Namugongo, Kampala, Uganda · +256 784 215 671 · info@memoraconcepts.com</span>
     <span>© 2026 Memora · Built to be remembered · #MakeItMemorable</span>
   </div>
@@ -722,16 +576,8 @@ img{image-rendering:auto}
     b.innerHTML='<div class="ph"><img loading="lazy" decoding="async"'+dims(w.img)+' '+srcs(w.img)+' sizes="(max-width:600px) calc(100vw - 32px), (max-width:980px) 50vw, 400px" alt="'+w.t+': '+w.s+'"></div><div class="meta"><h3>'+w.t+'</h3><span class="tag">'+w.tag+'</span></div><p>'+w.s+'</p>';
     b.addEventListener('click',function(){openW(i)}); return b;
   }
-  W.forEach(function(w,i){grid.appendChild(card(w,i))});
-  function narrow(){var m=window.matchMedia('(max-width:600px)').matches;grid.querySelectorAll('.card').forEach(function(c){var w=W[+c.dataset.i];var on=!!(w.wide&&!m&&currentF==='all');c.style.gridColumn=on?'span 2':'';c.classList.toggle('wide',on)})}
-  var currentF='all';
-  document.querySelectorAll('.chip').forEach(function(c){c.addEventListener('click',function(){
-    currentF=c.dataset.f;
-    document.querySelectorAll('.chip').forEach(function(x){x.setAttribute('aria-pressed',x===c?'true':'false')});
-    grid.querySelectorAll('.card').forEach(function(el){el.hidden=!(currentF==='all'||el.dataset.k===currentF)});
-    narrow();
-  })});
-  window.addEventListener('resize',narrow); narrow();
+  // homepage shows six highlights; the full list lives on /work/
+  [0,2,1,4,3,6].forEach(function(i){grid.appendChild(card(W[i],i))});
   // reel: two copies for a seamless loop
   var picks=[0,2,4,1,3,5,6,9];
   for(var r=0;r<2;r++){picks.forEach(function(i,n){var w=W[i];var f=document.createElement('div');f.className='frame';if(r)f.setAttribute('aria-hidden','true');
@@ -747,31 +593,6 @@ img{image-rendering:auto}
     if(d.showModal) d.showModal(); else d.setAttribute('open','');}
   document.getElementById('dlgClose').addEventListener('click',function(){d.close?d.close():d.removeAttribute('open')});
   d.addEventListener('click',function(e){if(e.target===d) d.close()});
-  // menu
-  var mb=document.getElementById('menuBtn'),nav=document.getElementById('nav');
-  mb.addEventListener('click',function(){var o=nav.classList.toggle('open');mb.setAttribute('aria-expanded',o)});
-  function closeNav(){if(nav.classList.contains('open')){nav.classList.remove('open');mb.setAttribute('aria-expanded','false')}}
-  nav.querySelectorAll('a').forEach(function(a){a.addEventListener('click',closeNav)});
-  document.addEventListener('click',function(e){if(!nav.contains(e.target)&&e.target!==mb)closeNav()});
-  document.addEventListener('keydown',function(e){if(e.key==='Escape')closeNav()});
-  var openY=0;mb.addEventListener('click',function(){openY=window.scrollY});window.addEventListener('scroll',function(){if(nav.classList.contains('open')&&Math.abs(window.scrollY-openY)>60)closeNav()},{passive:true});
-  // copy helpers
-  function copy(text,btn){var done=function(){var o=btn.textContent;btn.textContent='Copied';setTimeout(function(){btn.textContent=o},1500)};
-    try{navigator.clipboard.writeText(text).then(done,function(){sel(btn)})}catch(e){sel(btn)}}
-  function sel(btn){var p=btn.closest('.v')||document.getElementById('msgOut');var r=document.createRange();r.selectNodeContents(p);var s=window.getSelection();s.removeAllRanges();s.addRange(r)}
-  document.querySelectorAll('.copy').forEach(function(b){b.addEventListener('click',function(){copy(b.dataset.copy,b)})});
-  // form
-  var f=document.getElementById('enq');
-  f.addEventListener('submit',function(e){e.preventDefault();
-    var n=document.getElementById('f-name').value.trim(),c=document.getElementById('f-contact').value.trim();
-    var err=document.getElementById('f-err'); if(!n||!c){err.hidden=false;return} err.hidden=true;
-    var co=document.getElementById('f-co').value.trim();
-    var msg='Hello Memora, I\'m '+n+(co?' from '+co:'')+'.\nI need: '+document.getElementById('f-need').value+'\nTiming: '+document.getElementById('f-when').value+'\n'+(document.getElementById('f-msg').value.trim()?'Details: '+document.getElementById('f-msg').value.trim()+'\n':'')+'Reach me on: '+c;
-    document.getElementById('msgOut').textContent=msg;
-    document.getElementById('waLink').href='https://wa.me/256784215671?text='+encodeURIComponent(msg);
-    var r=document.getElementById('result'); r.hidden=false; r.scrollIntoView({block:'nearest'});
-  });
-  document.getElementById('copyMsg').addEventListener('click',function(){copy(document.getElementById('msgOut').textContent,this)});
 })();
 </script>
 <script>
@@ -791,7 +612,6 @@ img{image-rendering:auto}
   var log=document.getElementById('moLog'),chips=document.getElementById('moChips'),form=document.getElementById('moForm'),inp=document.getElementById('moIn');
   var panel=document.getElementById('mo'),fab=document.getElementById('moFab');
   var turns=[],sample=null,canTools=false,busy=false,lead={},flow=null,opened=false;
-  var db=null,user=null,uid=null,vdoc=null,vstate=null;
 
   function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
   function linkify(s){return esc(s).replace(/(https:\/\/wa\.me\/[^\s]+)/g,'<a href="$1" target="_blank" rel="noopener">Open WhatsApp</a>')}
@@ -872,61 +692,12 @@ img{image-rendering:auto}
   document.getElementById('moClose').addEventListener('click',close);
   document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!panel.hidden)close()});
 
-  // Tracking and leads (db, signed-in viewers only)
-  var dirty=false,writing=false,timer=null;
-  function device(){var w=window.innerWidth;return w<700?'Phone':w<1100?'Tablet':'Desktop'}
-  function ref(){try{return document.referrer?new URL(document.referrer).hostname:'Direct'}catch(e){return 'Direct'}}
-  function queue(){dirty=true;clearTimeout(timer);timer=setTimeout(flush,3000)}
-  async function flush(){if(!vdoc||!vstate||writing||!dirty)return;writing=true;dirty=false;try{await vdoc.set(JSON.parse(JSON.stringify(vstate)))}catch(e){}writing=false;if(dirty)queue()}
-  function bump(k){if(!vstate)return;vstate[k]=(vstate[k]||0)+1;queue()}
-  function saveLead(l){if(!vstate)return;vstate.leads=(vstate.leads||[]).concat([{at:new Date().toISOString(),name:l.name||'',contact:l.contact||'',need:l.need||'',notes:l.notes||''}]).slice(-20);queue();flush()}
-  function watchSections(){
-    if(!('IntersectionObserver' in window))return;
-    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting&&vstate){var id=e.target.id||e.target.getAttribute('aria-labelledby');if(id&&vstate.sections.indexOf(id)<0){vstate.sections.push(id);queue()}}})},{threshold:.35});
-    document.querySelectorAll('main section').forEach(function(s){io.observe(s)});
-  }
-  (async function(){
-    if(!window.claude||!claude.use)return;
-    try{sample=await claude.use('sample')}catch(e){sample=null}
-    if(sample){try{var lim=await sample.limits();canTools=!!(lim&&lim.tools)}catch(e){canTools=false}document.getElementById('moMode').textContent='Answers powered by Claude'}
-    try{user=await claude.use('user');db=await claude.use('db')}catch(e){}
-    if(user&&db){
-      try{uid=await user.id()}catch(e){uid=null}
-      if(uid){
-        try{
-          vdoc=db.doc('visits/'+uid);var s=await vdoc.get();var now=new Date().toISOString();
-          vstate=s.exists?JSON.parse(JSON.stringify(s.data())):{first:now,visits:0,sections:[],leads:[],chats:0};
-          vstate.last=now;vstate.visits=(vstate.visits||0)+1;vstate.device=device();vstate.from=vstate.from||ref();vstate.sections=vstate.sections||[];
-          dirty=true;flush();watchSections();
-        }catch(e){vdoc=null;vstate=null}
-      }
-      var admin=false;try{admin=user.isOwner()||user.canEdit()}catch(e){}
-      if(admin)document.getElementById('insBtn').hidden=false;
-    }
-  })();
-
-  // Owner insights
-  var ins=document.getElementById('ins');
-  function fmt(t){try{return new Date(t).toLocaleString(undefined,{day:'numeric',month:'short',hour:'2-digit',minute:'2-digit'})}catch(e){return t||''}}
-  async function loadIns(){
-    var k=document.getElementById('insKpis'),L=document.getElementById('insLeads'),V=document.getElementById('insVisits');
-    k.innerHTML='<div><b>…</b><span>Loading</span></div>';L.innerHTML='';V.innerHTML='';
-    try{
-      var snap=await db.collection('visits').orderBy('last','desc').limit(500).get();
-      var rows=snap.docs.map(function(d){return d.data()||{}});
-      var visits=0,chats=0,leads=[],week=0,cut=Date.now()-7*864e5;
-      rows.forEach(function(r){visits+=r.visits||0;chats+=r.chats||0;(r.leads||[]).forEach(function(l){leads.push(l)});if(Date.parse(r.last)>cut)week++});
-      leads.sort(function(a,b){return a.at<b.at?1:-1});
-      k.innerHTML='<div><b>'+rows.length+'</b><span>Unique visitors</span></div><div><b>'+week+'</b><span>Active in last 7 days</span></div><div><b>'+visits+'</b><span>Total visits</span></div><div><b>'+chats+'</b><span>Mo conversations</span></div><div><b>'+leads.length+'</b><span>Leads captured</span></div>';
-      L.innerHTML=leads.length?leads.map(function(l){return '<tr><td>'+esc(fmt(l.at))+'</td><td>'+esc(l.name)+'</td><td>'+esc(l.contact)+'</td><td>'+esc(l.need)+'</td><td>'+esc(l.notes)+'</td></tr>'}).join(''):'<tr><td colspan="5" class="empty">No leads yet. They appear here when a visitor leaves details with Mo.</td></tr>';
-      V.innerHTML=rows.length?rows.map(function(r){return '<tr><td>'+esc(fmt(r.last))+'</td><td>'+(r.visits||0)+'</td><td>'+esc(r.device||'')+'</td><td>'+esc(r.from||'')+'</td><td>'+esc((r.sections||[]).join(', '))+'</td><td>'+(r.chats||0)+'</td></tr>'}).join(''):'<tr><td colspan="6" class="empty">No visits logged yet.</td></tr>';
-    }catch(e){k.innerHTML='<div><b>–</b><span>Could not load insights right now. Try Refresh.</span></div>'}
-  }
-  document.getElementById('insBtn').addEventListener('click',function(){ins.showModal();loadIns()});
-  document.getElementById('insRefresh').addEventListener('click',loadIns);
-  document.getElementById('insClose').addEventListener('click',function(){ins.close()});
+  // Leads from Mo go to WhatsApp for now; a hosted lead store can be added later.
+  function bump(){}
+  function saveLead(){}
 })();
 </script>
 
+<script src="/js/nav.js?v=1" defer></script>
 </body>
 </html>
