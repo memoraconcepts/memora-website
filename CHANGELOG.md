@@ -4,6 +4,16 @@ Live site: https://memoraconcepts.com
 Source: GitHub memoraconcepts/memora-website (branch main). Every push to main goes live on Netlify within about a minute.
 This folder on the Desktop is a copy of the live site files, refreshed after each change.
 
+## 17 Oct 2026
+
+- **No prices on the site.** All rates removed from pages, FAQs, search-engine data and Mo. Visitors are asked to request a quote instead.
+- **Pricing page retired.** /pricing/ now forwards to /contact/, which is set up as "Request a quote". You can delete the old "pricing" folder from this Desktop copy.
+- **Menu:** Work · Services · Founding offer · About · Contact, with a "Get a quote" button.
+- **About half the wording cut** (about 5,000 words down to 2,650). Every page keeps its heading, a one-line intro, a short list, the steps and 3–4 short FAQs.
+- **Homepage:** removed the "Pick the model that fits" price cards and the Field notes section. The founding offer is now a single band.
+- **Mo** points visitors to "Get a quote" instead of giving prices.
+- Internal rates now live in a separate price list (Claude Docs: "Memora price list (internal)").
+
 ## 14 Oct 2026 (afternoon)
 
 - Added X (https://x.com/memoraug) alongside LinkedIn, shown as round icons in the footer of every page, in the contact card on the homepage and contact page, and in the "Let's make it Memora-ble" band on the service pages.

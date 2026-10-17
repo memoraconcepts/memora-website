@@ -29,19 +29,19 @@
     log.appendChild(d);log.scrollTop=log.scrollHeight;
     history.push((who==='me'?'Visitor: ':'Mo: ')+text);return d}
   function setChips(list){chips.innerHTML='';list.forEach(function(c){var b=document.createElement('button');b.type='button';b.textContent=c;b.onclick=function(){handle(c)};chips.appendChild(b)})}
-  var MAIN=['What do you do?','Prices','Founding offer','Leave my details','Activations & events','AFCON 2027 kit','Talk to a person'];
+  var MAIN=['What do you do?','Get a quote','Founding offer','Activations & events','AFCON 2027 kit','Talk to a person'];
 
   // ---- answers (most specific first)
   var A=[
-    [/discount|offer|promo|founding|deal|half/i,'Our founding offer: the first 10 clients get 50% off their first month on any monthly plan, and their price is locked for life. Brand teams also get a free activation idea and 3D render. Tap "Leave my details" to claim a spot.'],
+    [/discount|offer|promo|founding|deal|half/i,'Our founding offer: the first 10 clients get 50% off their first month on any monthly plan, and their price is locked for life. Brand teams also get a free activation idea and 3D render. Tap "Get a quote" to claim a spot.'],
     [/afcon|football|fan zone|viewing|match/i,'AFCON 2027 starts on 19 June 2027, with matches in Kampala, Hoima and Lira. Our AFCON kit covers fan-zone design, viewing-party packs for bars and hotels, match-day content and merchandise. We are booking briefs now.'],
-    [/logo|identity|rebrand|guideline|profile|brand kit/i,'We design logos and full brand kits, guidelines, packaging and company profiles. A logo starts at UGX 400K, a full brand kit at UGX 1.5M and a company profile at UGX 500K.'],
-    [/deck|presentation|pitch/i,'We design pitch decks and presentations from UGX 350K. Agencies can also use our design desk for decks under their own name.'],
-    [/activation|event|booth|stand|backdrop|launch|experien|roadshow|expo|conference|photo booth/i,'Experiential is our signature: concept, 3D design, production through vetted partners, on-site set-up and a recap report. Event packages start at UGX 800K, and full builds are quoted per brief. Brand teams can ask for a free activation idea and 3D render.'],
+    [/logo|identity|rebrand|guideline|profile|brand kit/i,'We design logos, brand kits, guidelines, packaging and company profiles. Every job is quoted to your brief: tap "Get a quote" and I\'ll pass your details to the team.'],
+    [/deck|presentation|pitch/i,'We design pitch decks and presentations, and agencies can use our design desk for decks under their own name. Tap "Get a quote" for a quotation.'],
+    [/activation|event|booth|stand|backdrop|launch|experien|roadshow|expo|conference|photo booth/i,'Experiential is our signature: concept, 3D design, production through vetted partners, on-site set-up and a recap report. Every activation is quoted to your brief, and brand teams can ask for a free activation idea and 3D render.'],
     [/tiktok|video|reel|social|content|influenc|creator/i,'We make TikTok-first short video, social content calendars and creator campaigns. TikTok is now Uganda\'s biggest social app, so short vertical video is built into our Growth plan.'],
     [/oil|gas|energy|hse|safety|tender|construction|solar/i,'Our energy comms pack covers tender-ready company profiles, HSE campaign identities, safety signage and community engagement events, for contractors and suppliers in the sector.'],
     [/agency|subcontract|white.?label|overflow|nda/i,'Agencies use us as a design desk: key visuals, adaptations, 3D renders and decks under your name, with a fixed rate card and an NDA as standard. Ask us for the rate card.'],
-    [/price|cost|how much|budget|rate|charge|fee|plan|subscription|monthly/i,'Monthly plans: UGX 600K (Starter), UGX 1.5M (Growth) and from UGX 3.5M (Partner), and our first 10 clients get 50% off the first month. Event packages start at UGX 800K, a logo at UGX 400K and a company profile at UGX 500K. Final quotes depend on scope.'],
+    [/price|cost|how much|budget|rate|charge|fee|plan|subscription|monthly|quot/i,'Every job is quoted to your brief, so you only pay for what you need. Tap "Get a quote" and I\'ll pass your details to the team, or send your brief on WhatsApp. Our first 10 clients also get 50% off the first month on any monthly plan.'],
     [/pay|momo|mobile money|airtel|bank|deposit/i,'You can pay by MTN MoMo, Airtel Money or bank transfer. Monthly plans are paid in advance, and projects take a 50% deposit.'],
     [/where|location|office|address|namugongo|visit/i,'Our studio is in Namugongo, Kampala. The full address is coming soon, so message us to arrange a visit.'],
     [/long|turnaround|fast|deadline|how soon|when/i,'You get a reply within 2 working hours and a first draft within 48 hours on plan work. Event timelines depend on the package and the build.'],
@@ -52,7 +52,7 @@
 
   // ---- lead capture, sent to the team's inbox
   var lead=null,step=null;
-  function startLead(){lead={};step='name';say('Great. I\'ll pass your details straight to the team. What\'s your name?');setChips([])}
+  function startLead(){lead={};step='name';say('Great. I\'ll pass your details to the team for a quotation. What\'s your name?');setChips([])}
   function leadStep(t){
     if(step==='name'){lead.name=t;step='contact';say('Thanks, '+t.split(' ')[0]+'. What phone number (WhatsApp) or email should we use?');return}
     if(step==='contact'){
@@ -85,18 +85,18 @@
     t=String(t).trim();if(!t)return;
     say(t,'me');
     if(step){leadStep(t);return}
-    if(/^(leave my details|book a free brand check|start a project|get a quote|claim a spot)$/i.test(t)||/\b(quote|book|sign me up|call me|contact me)\b/i.test(t)){startLead();return}
+    if(/^(leave my details|book a free brand check|start a project|get a quote|request a quote|claim a spot)$/i.test(t)||/\b(quote|book|sign me up|call me|contact me)\b/i.test(t)){startLead();return}
     if(/^talk to a person$|human|real person|speak to|talk to/i.test(t)){say('You can chat with the team live on WhatsApp, or send an email to '+MAIL+'. Phone: +256 784 215 671 or +256 751 500 952.',null,contactActs('Hello Memora, I\'d like to talk to someone.'));return}
     var a=answer(t);
     if(a){say(a);return}
     say('Good question. A person from the team can answer that properly. Leave your details and they\'ll get back to you, or message them now:',null,contactActs('Hello Memora, '+t));
-    setChips(['Leave my details','Prices','What do you do?'])
+    setChips(['Get a quote','What do you do?'])
   }
   form.addEventListener('submit',function(e){e.preventDefault();var v=inp.value;inp.value='';handle(v)});
 
   var opened=false;
   function open(){panel.hidden=false;fab.setAttribute('aria-expanded','true');
-    if(!opened){opened=true;say('Hi, I\'m Mo from Memora. I can tell you about our services, prices and timing, or pass your details to the team. What are you working on?');setChips(MAIN)}
+    if(!opened){opened=true;say('Hi, I\'m Mo from Memora. I can tell you about our services and timing, or pass your details to the team for a quote. What are you working on?');setChips(MAIN)}
     inp.focus()}
   function close(){panel.hidden=true;fab.setAttribute('aria-expanded','false');fab.focus()}
   fab.addEventListener('click',function(){panel.hidden?open():close()});
